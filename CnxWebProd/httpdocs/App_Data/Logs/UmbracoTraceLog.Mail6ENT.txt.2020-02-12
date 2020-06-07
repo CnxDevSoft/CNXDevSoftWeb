@@ -1,0 +1,8 @@
+﻿ 2020-02-12 02:02:47,623 [P88520/D2/T480] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 02:02:47
+ 2020-02-12 06:02:47,633 [P88520/D2/T508] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 06:02:47
+ 2020-02-12 06:43:34,234 [P88520/D2/T540] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com/umbraco
+ 2020-02-12 06:43:34,234 [P88520/D2/T540] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com/umbraco (UmbracoModule request)
+ 2020-02-12 10:02:47,646 [P88520/D2/T235] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 10:02:47
+ 2020-02-12 14:02:47,650 [P88520/D2/T30] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 14:02:47
+ 2020-02-12 18:02:47,684 [P88520/D2/T282] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 18:02:47
+ 2020-02-12 22:02:52,680 [P88520/D2/T638] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-02-11 22:02:52

@@ -1,0 +1,97 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = "Layout.cshtml";
+}
+
+
+ @section MainContent{
+<div class="intro-page">
+       <div class="container">
+           <h1>About Us</h1>
+           <p> <b> CNX Development Software (cnxdevsoft) </b> Consulting Services Website design and creation In Chiang Mai, northern regions and throughout Thailand In the form of a personal website Business website
+                            The store website or website comes directly from the needs of customers. Focus on creating customer satisfaction as a key Which we have a variety of services
+                            Can be adjusted To meet the needs And customer use With <b> ASP.Net, C #, MVC Framework, Web Form, E-Commerce technology
+                            And Umbraco CMS </b> by Website Developer Website Developer
+                           
+                        </p>
+       </div>
+   </div>
+<section class="our-team">
+            <div class="container">
+                <h2>Our Team</h2>
+                @*<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*@
+                <span class="dot-dash dark">.</span>
+                <div class="our-team--container">
+                    <div class="row">
+                    <div class="our-team--item col-md-4" onclick="window.open('/about/patompol/');">
+                        <div class="our-team--item__image">
+                            <img src="/media/1008/patompol-1.jpg" class="high" alt="" />
+                        </div>
+                        <div class="our-team--item__info">
+                            <h3>PATOMPOL TAESUJI</h3>
+                            <h5>CEO/SOFTWARE ENGINEER</h5>
+                        </div>
+                    </div>
+                    <div class="our-team--item col-md-4">
+                        <div class="our-team--item__image" onclick="window.open('/about/patiwat/');">
+                            <img src="/media/1003/patiwat.jpg" class="high" alt="" />
+                        </div>
+                        <div class="our-team--item__info" onclick="window.open('/about/patiwat/');">
+                            <h3>PATIWAT PHEWLAONG</h3>
+                            <h5>CTO/SOFTWARE ENGINEER</h5>
+                        </div>
+                    </div>
+                    <div class="our-team--item col-md-4">
+                        <div class="our-team--item__image" onclick="window.open('/about/apichai/');">
+                            <img src="/media/1010/apichai-2.jpg" class="high" alt="" />
+                        </div>
+                        <div class="our-team--item__info" onclick="window.open('/about/apichai/');">
+                            <h3>APICHAI RUTTANA</h3>
+                            <h5>CTO/SOFTWARE ENGINEER</h5>
+                        </div>
+                    </div>
+                    <div class="our-team--item col-md-4">
+                        <div class="our-team--item__image" onclick="window.open('/about/phornthep/');">
+                            <img src="/media/1057/Noom.jpg" class="high" alt="" />
+                        </div>
+                        <div class="our-team--item__info" onclick="window.open('/about/phornthep/');">
+                            <h3>Phornthep Chooleat</h3>
+                            <h5>FULLSTACK DESIGNER</h5>
+                        </div>
+                    </div>
+                    <div class="our-team--item col-md-4">
+                        <div class="our-team--item__image" onclick="window.open('/about/passakorn/');">
+                            <img src="/media/1046/big.jpg" class="high" alt="" />
+                        </div>
+                        <div class="our-team--item__info" onclick="window.open('/about/passakorn/');">
+                            <h3>PASSAKORN BUADEE</h3>
+                            <h5>CTO/SOFTWARE ENGINEER/DEVOPS ENGINEER</h5>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+<style> 
+.high{width:1440px; image-resolution:300dpi; }
+.our-team--item__image, .our-team--item__info {cursor: pointer;}
+.our-team--item:hover .our-team--item__image {
+    border-color: #FF8C00;
+}
+.our-team--item__image:before {
+    width: 4px;
+}
+.our-team--item:hover .our-team--item__info {
+    transition: all 0.3s;
+    color: #FF8C00;
+}
+</style>
+<script>
+    // $(".our-team--item").mouseover(function(){
+    //     $(".our-team--item__info").css("color", "#FF8C00")
+    // })
+</script>
+      
+            }
+            

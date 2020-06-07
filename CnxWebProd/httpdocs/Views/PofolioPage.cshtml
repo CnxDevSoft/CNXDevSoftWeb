@@ -1,0 +1,226 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Layout.cshtml";
+}
+
+@* the fun starts here *@
+
+ @section MainContent{
+ 
+  <div class="intro-page">
+       <div class="container">
+           <h1>Portfolio</h1>
+          @* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>*@
+       </div>
+   </div>
+
+    <div class="wrapper">
+        <section class="recent-works">
+            <div class="container">
+                <h2>Recent Works</h2>
+                <p></p>
+                <span class="dot-dash dark">.</span>
+                <div class="recent-works--nav">
+                    <ul>
+                        <li class="active" data-filter="*">All Items</li>
+                        <li data-filter=".web">Web Application</li>
+                        <li data-filter=".mobile">Mobile</li>
+                        <li data-filter=".devops">Devops</li>
+                        <li data-filter=".innovation">Innovation Project</li>
+                       @* <li data-filter=".animation">Animation</li>
+                        <li data-filter=".art">Art</li>
+                        <li data-filter=".web">Web Design</li>
+                        <li data-filter=".photo">Photography</li>
+                        <li data-filter=".video">Video</li>*@
+                    </ul>
+                </div>
+            </div>
+            <div class="recent-works--items">
+                <div class="recent-works--items__item web">
+                    <a href="#">
+                        <img src="http://www.cnxdevsoft.com/media/1041/image.png" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>DIP Thailand</h4>
+                                <p>AngularJs + Java Spring Boots</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="recent-works--items__item web">
+                    <a href="https://github.com/aunsparrow/DataCenter.git">
+                        <img src="http://www.cnxdevsoft.com/media/1051/dotnetcoreabp.png" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>ABP Framework</h4>
+                                <p>.Net Core</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="recent-works--items__item innovation">
+                    <a href="http://www.riskgame.net">
+                        <img src="http://www.cnxdevsoft.com/media/1038/image.png" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>Risk Game</h4>
+                                <p>Gamefication for learning risk management in software.</p>
+                                <p>.NET MVC + SQL Server + SignalR + Bootstaps</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item innovation">
+                    <a href="#">
+                        <img src="http://www.cnxdevsoft.com/media/1047/blazorapp.png" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>Blazor App</h4>
+                                <p>Blazor framework is .NET and Razor instead of JavaScript and HTML</p>
+                                <p>.NET Core + Blazor</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                 <div class="recent-works--items__item innovation">
+                    <a href="https://github.com/PatiwatPPh/ChatBoard">
+                        <img src="/media/1052/screen-shot-2563-01-10-at-003014.png" alt="Realtime ChatApp">
+                        <div class="inner-item">
+                            <div>
+                                <h4>Realtime ChatApp</h4>
+                                <p>Real time data from any cleint input or database input</p>
+                                <p>Node.js + Socket.io + Angular</p>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item innovation">
+                    <a href="#">
+                        <img src="http://www.cnxdevsoft.com/media/1054/image.png" alt="abp.io">
+                        <div class="inner-item">
+                            <div>
+                                <h4>Swagger .NET CORE Build by abp.io frameworks</h4>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item web">
+                    <a href="#">
+                        <img src="http://www.cnxdevsoft.com/media/1042/image.png" alt="MTL Six Packs">
+                        <div class="inner-item">
+                            <div>
+                                <h4>MTL Administrator Website</h4>
+                                <p>Customer management website for insuarance business</p>
+                                <p>.NET MVC + SQL Server + Bootstaps + Azure + DataTable + Telerik Report</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="recent-works--items__item devops">
+                    <a href="#">
+                        <img src="http://www.cnxdevsoft.com/media/1050/image.png" alt="MTL Six Packs">
+                        <div class="inner-item">
+                            <div>
+                                <h4>Azure Devops - Pipeline</h4>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+               
+                
+                
+               @* <div class="recent-works--items__item print">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/4.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item art">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/3.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item web">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/4.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item print">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/4.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item web">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/3.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item web">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/4.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="recent-works--items__item art">
+                    <a href="single-portfolio.html">
+                        <img src="assets/img/3.jpg" alt="">
+                        <div class="inner-item">
+                            <div>
+                                <h4>T-Shirt Design</h4>
+                                <p>art / t-shirt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>*@
+            </div>
+        </section>
+
+        @Html.Partial("ViewTechStack")
+
+    </div>
+ 
+ }

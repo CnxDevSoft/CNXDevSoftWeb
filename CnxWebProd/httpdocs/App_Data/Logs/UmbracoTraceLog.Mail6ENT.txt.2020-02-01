@@ -1,0 +1,113 @@
+﻿ 2020-02-01 02:12:23,373 [P129428/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.15.3 application starting on MAIL6ENT
+ 2020-02-01 02:12:23,373 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2020-02-01 02:12:23,388 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 16ms)
+ 2020-02-01 02:12:23,435 [P129428/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2020-02-01 02:12:23,435 [P129428/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2020-02-01 02:12:23,435 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 02:12:23,560 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 124ms)
+ 2020-02-01 02:12:23,560 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2020-02-01 02:12:23,560 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 0ms)
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 0ms)
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2020-02-01 02:12:23,607 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 1ms)
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 0ms)
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2020-02-01 02:12:23,623 [P129428/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 0ms)
+ 2020-02-01 02:12:25,451 [P129428/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2020-02-01 02:12:25,654 [P129428/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2020-02-01 02:12:25,716 [P129428/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2020-02-01 02:12:25,888 [P129428/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2020-02-01 02:12:25,904 [P129428/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2600ms)
+ 2020-02-01 02:43:23,455 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2020-02-01 02:43:23,455 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2020-02-01 02:43:23,455 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2020-02-01 02:43:23,455 [P129428/D2/T53] INFO  Umbraco.Core.MainDom - Stopping...
+ 2020-02-01 02:43:23,455 [P129428/D2/T53] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.ExamineStartup - Complete (took 8ms)
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2020-02-01 02:43:23,470 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2020-02-01 02:43:23,486 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2020-02-01 02:43:23,486 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2020-02-01 02:43:23,486 [P129428/D2/T53] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2020-02-01 02:43:23,486 [P129428/D2/T29] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: HostingEnvironment
+
+_shutDownMessage=HostingEnvironment initiated shutdown
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.Hosting.PipelineRuntime.StopProcessing()
+ 2020-02-01 10:57:25,652 [P45596/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.15.3 application starting on MAIL6ENT
+ 2020-02-01 10:57:25,668 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2020-02-01 10:57:25,699 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 29ms)
+ 2020-02-01 10:57:25,778 [P45596/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2020-02-01 10:57:25,778 [P45596/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2020-02-01 10:57:25,778 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:25,980 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 197ms)
+ 2020-02-01 10:57:25,980 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2020-02-01 10:57:25,980 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 1ms)
+ 2020-02-01 10:57:26,059 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:26,059 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:26,059 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 0ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 1ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 0ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:26,074 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2020-02-01 10:57:26,090 [P45596/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 1ms)
+ 2020-02-01 10:57:29,167 [P45596/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2020-02-01 10:57:29,433 [P45596/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2020-02-01 10:57:29,542 [P45596/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2020-02-01 10:57:29,746 [P45596/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2020-02-01 10:57:29,761 [P45596/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 4269ms)
+ 2020-02-01 10:57:30,027 [P45596/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com:80/umbraco
+ 2020-02-01 10:57:30,027 [P45596/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com:80/umbraco (UmbracoModule request)
+ 2020-02-01 10:57:31,355 [P45596/D2/T11] INFO  umbraco.content - Load Xml from file...
+ 2020-02-01 10:57:31,371 [P45596/D2/T11] INFO  umbraco.content - Loaded Xml from file.
+ 2020-02-01 10:57:32,199 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:32,199 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:32,199 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2020-02-01 10:57:32,199 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 0ms)
+ 2020-02-01 10:57:32,886 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:57:32,886 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:57:32,886 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2020-02-01 10:57:32,886 [P45596/D2/T11] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 0ms)
+ 2020-02-01 10:58:31,418 [P45596/D2/T17] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-02-01 10:58:31,418 [P45596/D2/T17] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-02-01 10:58:31,418 [P45596/D2/T17] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2020-02-01 10:58:31,418 [P45596/D2/T17] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 0ms)
+ 2020-02-01 10:58:31,449 [P45596/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-31 10:58:31
+ 2020-02-01 14:58:36,454 [P45596/D2/T86] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-31 14:58:36
+ 2020-02-01 15:02:31,861 [P45596/D2/T119] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2020-02-01 18:58:37,132 [P45596/D2/T526] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-31 18:58:37
+ 2020-02-01 22:58:37,140 [P45596/D2/T382] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-31 22:58:37

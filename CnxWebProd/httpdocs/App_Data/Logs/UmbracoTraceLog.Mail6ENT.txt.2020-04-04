@@ -1,0 +1,9 @@
+﻿ 2020-04-04 00:14:10,198 [P19680/D2/T340] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com/umbraco
+ 2020-04-04 00:14:10,198 [P19680/D2/T340] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com/umbraco (UmbracoModule request)
+ 2020-04-04 00:44:41,881 [P19680/D2/T546] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 00:44:41
+ 2020-04-04 04:44:43,318 [P19680/D2/T166] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 04:44:43
+ 2020-04-04 08:44:44,311 [P19680/D2/T732] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 08:44:44
+ 2020-04-04 12:44:45,733 [P19680/D2/T190] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 12:44:45
+ 2020-04-04 16:44:47,346 [P19680/D2/T525] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 16:44:47
+ 2020-04-04 20:44:48,531 [P19680/D2/T575] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-03 20:44:48
+ 2020-04-04 23:34:18,633 [P19680/D2/T524] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.

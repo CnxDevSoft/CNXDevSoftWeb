@@ -1,0 +1,48 @@
+﻿ 2020-01-06 03:23:59,388 [P65328/D2/T239] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 03:23:59
+ 2020-01-06 07:23:59,396 [P65328/D2/T256] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 07:23:59
+ 2020-01-06 09:38:26,772 [P65328/D2/T227] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com/umbraco
+ 2020-01-06 09:38:26,772 [P65328/D2/T227] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com/umbraco (UmbracoModule request)
+ 2020-01-06 11:23:59,410 [P65328/D2/T226] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 11:23:59
+ 2020-01-06 15:23:59,411 [P65328/D2/T362] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 15:23:59
+ 2020-01-06 19:24:04,401 [P65328/D2/T364] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 19:24:04
+ 2020-01-06 21:24:26,511 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:24:26,511 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:24:26,511 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2020-01-06 21:24:26,574 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 53ms)
+ 2020-01-06 21:24:47,355 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:24:47,355 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:24:47,355 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2020-01-06 21:24:47,355 [P65328/D2/T352] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 0ms)
+ 2020-01-06 21:52:10,323 [P65328/D2/T345] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username patompoltsj@gmail.com from IP address 171.4.218.65
+ 2020-01-06 21:52:19,557 [P65328/D2/T342] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username patompoltsj@gmail.com from IP address 171.4.218.65
+ 2020-01-06 21:52:23,416 [P65328/D2/T258] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username patompoltsj@gmail.com from IP address 171.4.218.65
+ 2020-01-06 21:52:29,635 [P65328/D2/T353] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username patompoltsj@gmail.com from IP address 171.4.218.65
+ 2020-01-06 21:52:29,635 [P65328/D2/T353] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: patompoltsj@gmail.com logged in from IP address 171.4.218.65
+ 2020-01-06 21:52:30,307 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:52:30,307 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:52:30,307 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2020-01-06 21:52:30,307 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 1ms)
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:52:30,323 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:52:30,338 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2020-01-06 21:52:30,338 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 0ms)
+ 2020-01-06 21:52:30,354 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:52:30,354 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:52:30,354 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2020-01-06 21:52:30,354 [P65328/D2/T264] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 0ms)
+ 2020-01-06 21:54:35,920 [P65328/D2/T341] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-06 21:54:35,920 [P65328/D2/T341] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-06 21:54:35,920 [P65328/D2/T341] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2020-01-06 21:54:35,920 [P65328/D2/T341] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 0ms)
+ 2020-01-06 22:23:38,276 [P65328/D2/T194] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: patompoltsj@gmail.com, IP Address: 171.4.218.65
+ 2020-01-06 22:24:57,128 [P65328/D2/T500] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username patompoltsj@gmail.com from IP address 171.4.218.65
+ 2020-01-06 22:24:57,128 [P65328/D2/T500] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: patompoltsj@gmail.com logged in from IP address 171.4.218.65
+ 2020-01-06 23:03:55,070 [P65328/D2/T348] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username apichai.ruttana@cnxdevsoft.com from IP address 171.4.222.24
+ 2020-01-06 23:03:55,070 [P65328/D2/T348] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: apichai.ruttana@cnxdevsoft.com logged in from IP address 171.4.222.24
+ 2020-01-06 23:24:04,409 [P65328/D2/T223] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-05 23:24:04
+ 2020-01-06 23:40:42,458 [P65328/D2/T341] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: patompoltsj@gmail.com, IP Address: 171.4.218.65
+ 2020-01-06 23:40:45,912 [P65328/D2/T469] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: patompoltsj@gmail.com, IP Address: 171.4.218.65

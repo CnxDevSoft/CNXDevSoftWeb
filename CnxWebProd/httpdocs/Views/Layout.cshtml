@@ -1,0 +1,95 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = null;
+    ViewBag.Title = "CNXDEVSOFT - Software Engineer Team";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="cnxdevsoft,cnx,chaingmai,Responsive Design,CMS,website,software,รับทำเวปไซด์,ราคาประหยัด,รวดเร็ว,ราคาถูก,เวปไซด์,เชียงใหม่,ภาคเหนือ,ประเทศไทย,Umbraco,.NET,MVC,Thailand,Job,งาน,Cheap,shop,webshop,business,Ipad,Iphone,Tablet,MSSQL,SERVER,Umbraco CMS Website Development" />
+    <meta name="keywords" content="cnxdevsoft,cnx,chaingmai,Responsive Design,CMS,website,software,รับทำเวปไซด์,ราคาประหยัด,รวดเร็ว,ราคาถูก,เวปไซด์,เชียงใหม่,ภาคเหนือ,ประเทศไทย,Umbraco,.NET,MVC,Thailand,Job,งาน,Cheap,shop,webshop,business,Ipad,Iphone,Tablet,MSSQL,SERVER,Umbraco CMS Website Development" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <link href="/css/vendor/bootstrap.css" rel="stylesheet" />
+    <link href="/css/vendor/font-awesome.css" rel="stylesheet" />
+    <link href="/css/vendor/slick.css" rel="stylesheet" />
+    <link href="/css/vendor/slick-theme.css" rel="stylesheet" />
+    <link href="/css/vendor/odometer-theme-default.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="http://www.cnxdevsoft.com/media/1001/logo3.png" alt=""/></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                   @* <li><a href="/services">Services</a></li>*@
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    @*<li><a href="/contact">Contact</a></li>*@
+                </ul>
+            </div>
+            <div class="mobile-menu"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    @RenderBody()
+    <div class="wrapper">
+    
+         @RenderSection("MainContent", required: false)
+        
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <ul>
+                        <li><a href="mailto:info@cnxdevsoft.com" target="_blank"><i class="fa fa-envelope-o"></i> info@cnxdevsoft.com</a></li>
+                       
+
+                        <li><a href="https://www.facebook.com/CNXDevSoft-265513730520551" target="_blank"><i class="fa fa-facebook"></i> CNXDEVSOFT</a></li>
+                        @*<li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-phone"></i> 0931838823</a></li>
+                        <li><a href="#"><i class="fa fa-mobile"></i> 0956838855</a></li>
+                        <li><a href="#"><i class="fa fa-tumblr"></i></a></li>*@
+                    </ul>
+                </div>
+                 <div class="col-md-3 col-sm-12">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-phone"></i> <span>0931838823</span></a></li>
+                        <li><a href="#"><i class="fa fa-mobile"></i> 0956838855</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p><a href="/">CnxDevsoft - software engineer team © 2020</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        window.odometerOptions = {
+            format: '(,ddd)',
+        };
+    </script>
+    <script src="/js/vendor/jquery-3.1.0.min.js"></script>
+    <script src="/js/vendor/jquery.easing.min.js"></script>
+    <script src="/js/vendor/tether.js"></script>
+    <script src="/js/vendor/bootstrap.js"></script>
+    <script src="/js/vendor/slick.js"></script>
+    <script src="/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="/js/vendor/odometer.min.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

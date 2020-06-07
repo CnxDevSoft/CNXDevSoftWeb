@@ -1,0 +1,175 @@
+﻿
+@using System.Linq;
+
+@{
+    Layout = "Layout.cshtml";
+}
+
+@section MenuScript{
+	<script type="text/javascript"  src="/scripts/menu.js"></script>
+}
+
+@section TopMenu{
+
+	<div class="content" id="home">
+	<div class="header">
+		<div class="wrap">
+		      <header id="topnav">
+			        <nav>
+			        		 <ul>
+			        		 	<li class="active"><a href="#home" class="scroll">Homepage</a></li>
+								<li><a title="CNX develop software" href="#team" class="scroll">OurServices</a></li>
+								@*<li><a title="CNX develop software" href="#ourstory" class="scroll">@Umbraco.GetDictionaryValue("Portfolio")</a></li>*@
+								<li><a title="CNX develop software" href="#blog" class="scroll">AboutUs</a></li>
+								<li><a title="CNX develop software" href="#contact" class="scroll">ContactUS</a></li>								
+								<div class="clear"> </div>
+							</ul>
+		        	</nav>
+			         <div id="Logo"><img alt="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม่" src="/images/logo3.png" title="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม"></div>
+			        	<a title="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม" href="/" id="navbtn">Nav Menu</a>
+			        <div class="clear"> </div>
+		        </header>
+		    </div>
+		</div>
+					
+}
+
+@section MainContent{
+
+		
+							<!----start Package Blog---->
+								@Html.Partial("DisplaySlideShow")
+							<!----//End Package Blog---->
+	
+</div>
+						
+						
+						
+						
+						
+
+	
+
+
+	 <div  class="blog" id="blog">	  
+		<div class="wrap">
+		<div class="pricing-plans">
+			<h1>@Model.Content.GetPropertyValue("aboutUsTitle")</h1>
+			<hr/>
+			
+			@Html.Raw(@Model.Content.GetPropertyValue("aboutUsText"))
+		@*	<p><b>CNX Development Software(cnxdevsoft)</b> บริการให้คำปรึกษา ออกแบบและจัดทำเว็บไซด์ ในจังหวัดเชียงใหม่ เขตภาคเหนือ และทั่วประเทศไทย ในรูปแบบเว็บไซต์ส่วนตัว เว็บไซต์เชิงธุรกิจ 
+เว็บร้านค้า หรือเว็บไซด์ที่มาจากความต้องการของลูกค้าโดยตรง มุ่งเน้นการสร้างความพึงพอใจของลูกค้าเป็นสำคัญ โดยเรามีบริการที่หลากหลายรูปแบบ 
+ยืดหยุ่น สามารถปรับเปลี่ยน เพื่อตอบสนองความต้องการ และการใช้งานของลูกค้า ด้วยเทคโนโลยี <b>ASP.Net, C#, MVC Framework, Web Form, E-Commerce 
+และ Umbraco CMS </b>โดยนักพัฒนาเว็บไซต์ Website Developer
+ที่มีประสบการณ์และความเชี่ยวชาญที่เน้นคุณภาพ ความเที่ยงตรง เป็นมิตร และบริการหลังการขายที่ดี อีกทั้งบริการ ในราคาย่อมเยา ทำให้ลูกค้าสามารถไว้วางใจ 
+มั่นใจที่จะเลือกใช้บริการ CNXDEVSOFT อย่างไรก็ตาม เราจะยังคงพัฒนาระบบ และการบริการให้ดียิ่งๆขึ้นต่อไป เพื่อทำให้ ลูกค้า ทุกท่านพึงพอใจสูงสุด</p>
+	<p>การออกแบบเว็บไซต์ เราให้บริการออกแบบเว็บไซต์ โดยรองรับเทคโนโลยีใหม่ๆ สามารถแสดงผลได้ทุกๆเครื่องมือแสดงผล ไม่ว่าจะเป็น <b>IPhone, IPad, 
+Smart Phone, Tablet </b>ที่เรียกว่า <b>Responsive Web Design</b> จะช่วยให้การแสดงผลบนหน้าจอเหล่านี้ มีความสวยงาม เป็นระเบียบ อ่านง่าย 
+ใช้งานง่ายและเหมาะสมกับธุรกิจ หรือหน่วยงานของคุณ ซึ่งเราจะมีการสอบถามความต้องการของลูกค้าเพื่อให้เกิดความพึงพอใจมากที่สุดโดยเราเลือกใช้เทคโนโลยี
+การออกแบบ ด้วยเทคโนโลยีใหม่ล่าสุด คือ <b>HTML5 ,CSS3 ,JQuery, Ajax</b>  ที่เป็นเทคโนโลยีใหม่ล่าสุด มีความเสถียรภาพในการแสดงผลมากที่สุด </p>
+	<p>เรายังมีบริการโปรโมทเว็บไซต์ <b>(SEO)</b> เมื่อมีการสร้างเว็บไซต์ และต้องการประชาสัมพันธ์ให้เว็บไซต์เป็นที่รู้จัก การทำ SEO จะช่วยให้เว็บไซต์
+ของคุณติดอยู่บนหน้าแรกของการค้นหาใน Google และ  Search Engine ต่างๆ ทำให้มีโอกาสที่จะมีผู้เข้ามาชมเว็บไซต์ของคุณมากขึ้น เป็นการส่งเสริมให้
+ธุรกิจ หรือหน่วยงานของท่านเป็นที่รู้จักมากขึ้นอย่างแน่นอน</p>*@
+			
+			
+			<!---start-team----->
+	<div  class="team" id="team">
+		<div class="wrap">
+		    <div class="content-top">
+				<div class="col_1_of_3 span_1_of_3"><a title="CNX develop software" href="#small-dialog2" class="popup-with-zoom-anim">
+					<img src="@Umbraco.Media(Model.Content.GetPropertyValue("teamPicture1")).umbracoFile" alt="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม" />
+					<img alt="CNX develop software" src="/images/border.jpg">
+					</a>
+				</div>
+				<div class="col_1_of_3 span_1_of_3"><a title="CNX develop software" href="#small-dialog2" class="popup-with-zoom-anim">
+					<img src="@Umbraco.Media(Model.Content.GetPropertyValue("teamPicture2")).umbracoFile" alt="CNX develop software | ทีมพัฒนาเว็บ ออกแบบกราฟิค โลโก้ ราคาถูก เชียงใหม" />
+					<img alt="CNX develop software" src="/images/border3.png">
+					</a>
+				</div>
+				<div class="col_1_of_3 span_1_of_3"><a title="CNX develop software" href="#small-dialog2" class="popup-with-zoom-anim">
+					<img src="@Umbraco.Media(Model.Content.GetPropertyValue("teamPicture3")).umbracoFile" alt="CNX develop software | ทีมพัฒนาเว็บ รับทำ SEO  ราคาถูก เชียงใหม่" />
+					<img alt="CNX develop software" src="/images/border3.png">
+					</a>	
+			    </div>
+			    <div class="clear"></div>
+	   </div>
+	 </div>
+	</div>
+<!---//end-team----->
+			
+							<!----start Package Blog---->
+								@Html.Partial("DisplayPackageBlog")
+							<!----//End Package Blog---->
+				
+							<div class="clear"> </div>
+							
+					</div>
+				</div>
+			</div>
+			
+								
+								
+							
+								
+								
+								
+			@*					
+								
+				<!---start-our story----->
+		<div  class="ourstory" id="ourstory">
+				<div class="our-story">
+					<h1>Works in any browser </h1>
+					<h2>Revolvationary notebook with eco-friendly paper,advanced surface technology and degital sharing integration.</h2>
+				</div>	
+			<div class="group_2" id="Portfolio">
+				<div class="group_2_items">
+						<div class="wrap">
+					<div id="owl-demo1" class="owl-carousel">
+						
+						<div class="item">
+							<div class="carousel">
+						  	   <div class="group_2_img1">
+									<img src="/images/slider2.jpg" alt="CNX develop software">
+								</div>
+							 </div>
+						</div>	
+					<div class="item">
+						<div class="carousel">
+					  	    <div class="group_2_img1">
+								<img src="/images/slider3.jpg" alt="CNX develop software">
+							</div>
+						 </div>
+					</div>	
+					<div class="item">
+						<div class="carousel">
+					  	    <div class="group_2_img1">
+								<img src="/images/slider1.jpg" alt="CNX develop software">
+							</div>
+						 </div>
+					</div>
+					<div class="item">
+						<div class="carousel">
+					  	    <div class="group_2_img1">
+								<img src="/images/slider4.jpg" alt="CNX develop software">
+							</div>
+						 </div>
+					</div>
+					<div class="item">
+						<div class="carousel">
+					  	    <div class="group_2_img1">
+								<img src="/images/slider5.jpg" alt="CNX develop software">
+							</div>
+						 </div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+		<!----End-pricingplans---->*@
+		
+				
+}

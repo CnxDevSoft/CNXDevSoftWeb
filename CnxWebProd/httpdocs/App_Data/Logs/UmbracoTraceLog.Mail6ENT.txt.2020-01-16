@@ -1,0 +1,18 @@
+﻿ 2020-01-16 03:10:13,058 [P22100/D2/T460] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 03:10:13
+ 2020-01-16 07:10:13,067 [P22100/D2/T1204] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 07:10:13
+ 2020-01-16 11:10:13,078 [P22100/D2/T439] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 11:10:13
+ 2020-01-16 15:10:18,068 [P22100/D2/T359] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 15:10:18
+ 2020-01-16 15:17:41,759 [P22100/D2/T143] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username patompoltsj@gmail.com from IP address 118.172.185.58
+ 2020-01-16 15:17:41,759 [P22100/D2/T143] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: patompoltsj@gmail.com logged in from IP address 118.172.185.58
+ 2020-01-16 15:17:42,181 [P22100/D2/T143] ERROR Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper - Could not validate XSRF token
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The provided anti-forgery token was meant for user "patompoltsj@cnxdevsoft.com", but the current user is "patompoltsj@gmail.com".
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext, String cookieToken, String formToken)
+   at System.Web.Helpers.AntiForgery.Validate(String cookieToken, String formToken)
+   at Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper.ValidateTokens(String cookieToken, String headerToken)
+ 2020-01-16 15:19:56,731 [P22100/D2/T410] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2020-01-16 15:20:01,183 [P22100/D2/T32] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2020-01-16 19:10:18,076 [P22100/D2/T348] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 19:10:18
+ 2020-01-16 21:03:41,551 [P22100/D2/T1134] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com/umbraco
+ 2020-01-16 21:03:41,551 [P22100/D2/T1134] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com/umbraco (UmbracoModule request)
+ 2020-01-16 23:10:18,078 [P22100/D2/T1139] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-15 23:10:18

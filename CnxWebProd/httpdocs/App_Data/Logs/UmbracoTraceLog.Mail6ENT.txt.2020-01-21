@@ -1,0 +1,41 @@
+﻿ 2020-01-21 00:07:15,109 [P84048/D2/T59] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 00:07:15
+ 2020-01-21 04:07:15,115 [P84048/D2/T260] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 04:07:15
+ 2020-01-21 08:07:20,098 [P84048/D2/T245] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 08:07:20
+ 2020-01-21 12:07:20,129 [P84048/D2/T115] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 12:07:20
+ 2020-01-21 16:07:20,131 [P84048/D2/T206] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 16:07:20
+ 2020-01-21 17:50:03,384 [P84048/D2/T22] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2020-01-21 17:50:37,822 [P84048/D2/T69] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:50:37,822 [P84048/D2/T69] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:50:37,822 [P84048/D2/T69] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2020-01-21 17:50:37,868 [P84048/D2/T69] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 51ms)
+ 2020-01-21 17:50:38,947 [P84048/D2/T127] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:50:38,947 [P84048/D2/T127] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:50:38,947 [P84048/D2/T127] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2020-01-21 17:50:38,962 [P84048/D2/T127] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 0ms)
+ 2020-01-21 17:50:58,650 [P84048/D2/T154] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:50:58,650 [P84048/D2/T154] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:50:58,650 [P84048/D2/T154] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2020-01-21 17:50:58,650 [P84048/D2/T154] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 0ms)
+ 2020-01-21 17:50:58,712 [P84048/D2/T154] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username phornthep.chooleat@cnxdevsoft.com from IP address 118.172.237.7
+ 2020-01-21 17:50:58,712 [P84048/D2/T154] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: phornthep.chooleat@cnxdevsoft.com logged in from IP address 118.172.237.7
+ 2020-01-21 17:51:09,166 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:51:09,166 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:51:09,166 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2020-01-21 17:51:09,166 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 0ms)
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2020-01-21 17:51:09,197 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 0ms)
+ 2020-01-21 17:51:09,212 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:51:09,212 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:51:09,212 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2020-01-21 17:51:09,212 [P84048/D2/T24] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 0ms)
+ 2020-01-21 17:53:33,090 [P84048/D2/T20] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-01-21 17:53:33,090 [P84048/D2/T20] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-01-21 17:53:33,090 [P84048/D2/T20] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.HealthCheck.HealthCheck
+ 2020-01-21 17:53:33,090 [P84048/D2/T20] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.HealthCheck.HealthCheck (took 0ms)
+ 2020-01-21 20:07:20,138 [P84048/D2/T7] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-01-20 20:07:20

@@ -1,0 +1,7 @@
+﻿ 2020-04-09 02:55:26,244 [P51784/D2/T424] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 02:55:26
+ 2020-04-09 06:55:27,731 [P51784/D2/T149] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 06:55:27
+ 2020-04-09 08:41:48,798 [P51784/D2/T619] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2020-04-09 10:55:29,169 [P51784/D2/T424] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 10:55:29
+ 2020-04-09 14:55:30,187 [P51784/D2/T37] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 14:55:30
+ 2020-04-09 18:55:31,813 [P51784/D2/T573] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 18:55:31
+ 2020-04-09 22:55:33,349 [P51784/D2/T375] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-04-08 22:55:33

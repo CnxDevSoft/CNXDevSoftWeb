@@ -1,0 +1,12 @@
+﻿ 2020-05-12 01:11:48,621 [P43252/D2/T167] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2020-05-12 01:11:48,621 [P43252/D2/T167] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2020-05-12 01:11:48,621 [P43252/D2/T167] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2020-05-12 01:11:48,637 [P43252/D2/T167] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 3ms)
+ 2020-05-12 02:45:58,459 [P43252/D2/T406] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 02:45:58
+ 2020-05-12 06:45:59,903 [P43252/D2/T419] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 06:45:59
+ 2020-05-12 08:24:43,908 [P43252/D2/T135] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://www.cnxdevsoft.com/umbraco
+ 2020-05-12 08:24:43,908 [P43252/D2/T135] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://www.cnxdevsoft.com/umbraco (UmbracoModule request)
+ 2020-05-12 10:46:01,436 [P43252/D2/T547] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 10:46:01
+ 2020-05-12 14:46:02,405 [P43252/D2/T213] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 14:46:02
+ 2020-05-12 18:46:03,854 [P43252/D2/T499] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 18:46:03
+ 2020-05-12 22:46:05,406 [P43252/D2/T275] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2020-05-11 22:46:05

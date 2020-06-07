@@ -1,0 +1,248 @@
+﻿@{
+    Layout = "Layout.cshtml";
+}
+    <div class="home-slider">
+        <div class="home-slider--wrapper">
+            <div>
+                <div class="home-slider--wrapper__inner" style="background-image: url('/assets/img/slider.jpg')">
+                    <div class="container">
+                        <h3>Our Customers are our first priority</h3>
+                        <h1>WELCOME TO .NET WORLD</h1>
+                        <span class="dot-dash">.</span>
+                        <p>IF YOU NEED AND INTEREST TO USE MICROSOFT PLATFORM, WE CAN RESPONSE </p>
+                        <div class="slider-buttons">
+                            <a href="#" class="button">Our Services</a>
+                            <a href="#" class="button button-w">Contact US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="home-slider--wrapper__inner" style="background-image: url('/assets/img/slider.jpg')">
+                    <div class="container">
+                        <h3>Building a website with us</h3>
+                        <h1>THE BEST SOLUTIONS FOR YOUR BUSINESS</h1>
+                        <span class="dot-dash">.</span>
+                        <p>If this is your first time building a website we recommend using UMBRACO CMS for support your business, we can custom more features with .NET Platform inside. in any case, so you can get an idea of what they’re about before you commit </p>
+                        <div class="slider-buttons">
+                            <a href="#" class="button">Our Services</a>
+                            <a href="#" class="button button-w">Contact US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-slider--nav">
+            <div class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+            <div class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </div>
+        <div class="home-slider--anchor">
+            <span><i class="fa fa-anchor" aria-hidden="true"></i></span>
+        </div>
+    </div>
+
+   
+        
+        
+        @section MainContent{
+
+ 
+        <section class="four-elements">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="four-elements--image"><i class="fa fa-eye" aria-hidden="true"></i></div>
+                        <h3>New Technology</h3>
+                        <p>We are implement and develop software with new technology base on .NET plateform.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="four-elements--image"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                        <h3>Quality Code</h3>
+                        <p>Code quality can have a major impact on software quality, on the productivity of software teams, and their ability to collaborate.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="four-elements--image"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                        <h3>Fast Delivery</h3>
+                        <p>Auto Delivery and intelligent system by Power Devops team</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="four-elements--image"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+                        <h3>Good Support</h3>
+                        <p>We already to support our clients and customers 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-history">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <img src="/assets/img/Monitor.png" alt="" />
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <h2>Our History</h2>
+                        <p> <b> CNX Development Software (cnxdevsoft) </b> Consulting Services Website design and creation In Chiang Mai, northern regions and throughout Thailand In the form of a personal website Business website
+                            The store website or website comes directly from the needs of customers. Focus on creating customer satisfaction as a key Which we have a variety of services
+                            Can be adjusted To meet the needs And customer use With <b> ASP.Net, C #, MVC Framework, Web Form, E-Commerce technology
+                            And Umbraco CMS </b> by Website Developer Website Developer
+                            With experience and expertise that focuses on quality Accuracy, friendliness and good after-sales service As well as service At a reasonable price Enabling customers to trust
+                            Confident to choose CNXDEVSOFT service. However, we will continue to develop the system And services will continue to be improved in order to maximize customer satisfaction. </p>
+                            <p> Website design We provide website design services. By supporting new technology Can display all tools, display whether <b> IPhone, IPad,
+                            Smart Phone, Tablet </b> known as <b> Responsive Web Design </b> helps these screen displays be beautiful, organized, easy to read.
+                            Easy to use and suitable for business. Or your department In which we will inquire about the needs of customers to achieve the most satisfaction by choosing technology
+                            Designed with the latest technology, <b> HTML5, CSS3, JQuery, Ajax </b> is the latest technology. Has the most stability for rendering. </p>
+                            <p> We also provide website promotion services <b> (SEO) </b> when creating a website. And want to publicize the website to be known. SEO will help the website
+                            Yours on the first page of searches on Google and in the Search Engine, making it more likely that more visitors will come to your website. Encouraging
+                            Your business or department is definitely becoming more known. 
+                        </p>
+                        <a href="http://www.cnxdevsoft.com/about" class="button">Browse Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+@Html.Partial("ViewTechStack")
+
+       @* <section class="case-study">
+            <div class="container">
+                <h2>Case Study</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span class="dot-dash dark">.</span>
+            </div>
+            <div class="container">
+                <div class="case-study--sliders">
+                    <div class="case-study--left">
+                        <div class="case-study--left__textslider">
+                            <div>
+                                <div class="case-study--left__textslider__image"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                                <h4>Accumulate creative ideas</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <a href="#" class="button small">Read More</a>
+                            </div>
+                            <div>
+                                <div class="case-study--left__textslider__image"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                                <h4>Accumulate creative ideas</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <a href="#" class="button small">Read More</a>
+                            </div>
+                            <div>
+                                <div class="case-study--left__textslider__image"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                                <h4>Accumulate creative ideas</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <a href="#" class="button small">Read More</a>
+                            </div>
+                        </div>
+                        <div class="case-study--left__dots"></div>
+                    </div>
+                    <div class="case-study--right">
+                        <div class="case-study--right__imageslider">
+                            <div>
+                                <img src="/assets/img/case.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/assets/img/case.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="/assets/img/case.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+       @* <section class="statistics">
+            <div class="container">
+                <div class="statistics--item">
+                    <div class="statistics--item__image"><i class="fa fa-heart-o"></i></div>
+                    <h3 class="odometer first">0</h3>
+                    <h5>User Favourites</h5>
+                </div>
+                <div class="statistics--item">
+                    <div class="statistics--item__image"><i class="fa fa-tag"></i></div>
+                    <h3 class="odometer second">0</h3>
+                    <h5>User Favourites</h5>
+                </div>
+                <div class="statistics--item">
+                    <div class="statistics--item__image"><i class="fa fa-thumbs-o-up"></i></div>
+                    <h3 class="odometer third">0</h3>
+                    <h5>User Favourites</h5>
+                </div>
+                <div class="statistics--item">
+                    <div class="statistics--item__image"><i class="fa fa-star-o"></i></div>
+                    <h3 class="odometer fourth">0</h3>
+                    <h5>User Favourites</h5>
+                </div>
+                <div class="statistics--item">
+                    <div class="statistics--item__image"><i class="fa fa-paperclip"></i></div>
+                    <h3 class="odometer fifth">0</h3>
+                    <h5>User Favourites</h5>
+                </div>
+            </div>
+        </section>*@
+
+       @* <section class="partners">
+            <div class="container">
+                <h2>Great Integrations with Others</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span class="dot-dash dark">.</span>
+                <div class="partners--container">
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partners--item">
+                        <div class="partners--item__image">
+                            <img src="/assets/img/partner1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+  
+        
+        }
+     
