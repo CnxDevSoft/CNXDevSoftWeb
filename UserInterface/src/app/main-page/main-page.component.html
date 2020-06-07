@@ -16,7 +16,7 @@
   <div class="col-lg-5 order-lg-1 d-flex justify-content-end">
     <div class="row">
       <div class="col-lg-6 text-center mt-3 feature" id="feature-{{feature.id}}" *ngFor="let feature of features">
-        <div class="square m-auto">
+        <div class="square m-auto d-flex align-items-center justify-content-center">
           <i [class]="feature.image"></i>
         </div>
         <h5 class="text-uppercase mt-3 feature-name">{{feature.name}}</h5>
