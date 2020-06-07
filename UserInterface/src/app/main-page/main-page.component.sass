@@ -1,0 +1,80 @@
+@import "../../styles"
+
+.black-60
+  color: $black-60
+
+.black-bg
+  background-color: $black-87
+
+.card
+  border: none
+  background-color: transparent !important
+  .card-header
+    background-color: $black-60 !important
+
+.carousel
+  min-height: 100px
+
+.carousel-item.active
+  display: block
+
+.description
+  .underline-orange
+    display: inline-block
+    padding: 8px
+    border-bottom: 4px solid $primary
+    color: &$black-87
+  p
+    color: $black-60
+
+.square
+  $size: 80px
+  height: $size
+  width: $size
+  border: 4px solid $primary
+  filter: grayscale(100%)
+  transition: all 0.5s
+
+.feature-name
+  color: $black-60
+  transition: 0.5s
+
+.feature
+  &:hover
+    .feature-name
+      color: $primary
+    .square
+      filter: grayscale(0%)
+      transform: rotate(-45deg)
+      background-color: $primary
+
+.benefits-body
+  background-color: $black-60
+  color: $white-90
+  border-bottom: 1px solid $white-60
+  transition: all 0.5s
+  &:hover
+    background-color: transparent
+    color: $primary
+    &:before
+      filter: grayscale(100%)
+  &:before
+    content: ''
+    border-left: 4px solid $primary
+    padding-right: 8px
+
+.benefits-title
+  color: $primary
+
+.heading
+  font-size: 50px !important
+
+.services
+  background-image: url('https://www.successvalley.tech/wp-content/uploads/2019/06/business-meeting-862x519.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $black-87
+  min-height: 400px
+
+.services-title
+  color: $white-90
