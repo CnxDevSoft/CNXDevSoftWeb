@@ -1,5 +1,8 @@
 @import "../../styles"
 
+i
+  transition: all 0.5s
+
 .black-60
   color: $black-60
 
@@ -34,6 +37,7 @@
   border: 4px solid $primary
   filter: grayscale(100%)
   transition: all 0.5s
+  font-size: 2rem
 
 .feature-name
   color: $black-60
@@ -47,6 +51,9 @@
       filter: grayscale(0%)
       transform: rotate(-45deg)
       background-color: $primary
+      i
+        transform: rotate(45deg)
+        color: $white-90
 
 .benefits-body
   background-color: $black-60
