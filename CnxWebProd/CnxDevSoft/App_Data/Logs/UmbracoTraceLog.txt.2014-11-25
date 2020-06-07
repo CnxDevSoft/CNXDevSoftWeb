@@ -1,3 +1,0 @@
-﻿2014-11-25 01:46:58,903 [7] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 36] No physical template file was found for template Global
-2014-11-25 14:32:45,881 [7] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 23] No physical template file was found for template Global
-2014-11-25 17:47:58,109 [7] INFO  umbraco.BusinessLogic.Log - [Thread 60] Log scrubbed.  Removed all items older than 2014-09-26 17:47:58

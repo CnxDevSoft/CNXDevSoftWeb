@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CnxdevsoftUmbraco"
+    "\\CnxdevsoftUmbraco",
+    "\\CnxWebProd"
   ],
-  "SelectedNode": "\\CnxdevsoftUmbraco\\CnxdevsoftUmbraco.sln",
+  "SelectedNode": "\\CnxWebProd",
   "PreviewInSolutionExplorer": false
 }
