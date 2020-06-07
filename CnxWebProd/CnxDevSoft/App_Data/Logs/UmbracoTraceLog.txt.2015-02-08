@@ -1,0 +1,4 @@
+﻿2015-02-08 04:29:00,923 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 70] No physical template file was found for template Global
+2015-02-08 18:58:00,853 [6] INFO  umbraco.BusinessLogic.Log - [Thread 43] Log scrubbed.  Removed all items older than 2014-12-10 18:58:00
+2015-02-08 23:58:05,212 [6] INFO  umbraco.BusinessLogic.Log - [Thread 82] Log scrubbed.  Removed all items older than 2014-12-10 23:58:05
+2015-02-08 23:58:05,212 [6] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 82] Application shutdown. Reason: HostingEnvironment

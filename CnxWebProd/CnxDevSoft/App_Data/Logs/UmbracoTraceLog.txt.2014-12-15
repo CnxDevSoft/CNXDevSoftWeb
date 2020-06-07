@@ -1,0 +1,66 @@
+﻿2014-12-15 09:24:12,208 [6] INFO  Umbraco.Web.Security.WebSecurity - [Thread 33] User Id: 2 logged in
+2014-12-15 09:24:12,458 [6] INFO  Umbraco.Core.PluginManager - [Thread 10] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 09:24:12,458 [6] INFO  Umbraco.Core.PluginManager - [Thread 10] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 09:24:12,677 [6] INFO  Umbraco.Core.PluginManager - [Thread 65] Starting resolution types of umbraco.interfaces.ITree
+2014-12-15 09:24:12,692 [6] INFO  Umbraco.Core.PluginManager - [Thread 65] Completed resolution of types of umbraco.interfaces.ITree, found 35 (took 17ms)
+2014-12-15 11:37:47,632 [6] INFO  Umbraco.Core.PluginManager - [Thread 11] Starting resolution types of umbraco.interfaces.ICacheRefresher
+2014-12-15 11:37:47,632 [6] INFO  Umbraco.Core.PluginManager - [Thread 11] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 20 (took 1ms)
+2014-12-15 11:41:23,644 [6] INFO  Umbraco.Web.Security.WebSecurity - [Thread 85] User Id: 0 logged in
+2014-12-15 11:41:23,706 [6] INFO  Umbraco.Core.PluginManager - [Thread 11] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 11:41:23,706 [6] INFO  Umbraco.Core.PluginManager - [Thread 11] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 11:55:12,765 [6] INFO  Umbraco.Core.PluginManager - [Thread 43] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 11:55:12,765 [6] INFO  Umbraco.Core.PluginManager - [Thread 43] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 11:55:40,722 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 25] No physical template file was found for template Global
+2014-12-15 13:17:49,790 [6] INFO  Umbraco.Web.Security.WebSecurity - [Thread 23] User Id: 0 logged in
+2014-12-15 13:17:50,337 [6] INFO  Umbraco.Core.PluginManager - [Thread 23] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 13:17:50,337 [6] INFO  Umbraco.Core.PluginManager - [Thread 23] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 13:31:21,018 [6] INFO  Umbraco.Core.PluginManager - [Thread 28] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 13:31:21,018 [6] INFO  Umbraco.Core.PluginManager - [Thread 28] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 14:47:12,124 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 47] No physical template file was found for template Global
+2014-12-15 15:25:06,944 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 57] No physical template file was found for template Global
+2014-12-15 15:27:53,898 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.Trees.TreeController
+2014-12-15 15:27:53,898 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 0ms)
+2014-12-15 17:45:15,300 [6] INFO  umbraco.BusinessLogic.Log - [Thread 83] Log scrubbed.  Removed all items older than 2014-10-16 17:45:15
+2014-12-15 18:06:01,906 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 75] No physical template file was found for template Global
+2014-12-15 18:06:03,531 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 27] No physical template file was found for template Global
+2014-12-15 18:38:43,187 [6] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 11] An unhandled exception occurred
+System.FormatException: The specified string is not in the form required for an e-mail address.
+   at System.Net.Mail.MailAddressParser.ReadCfwsAndThrowIfIncomplete(String data, Int32 index)
+   at System.Net.Mail.MailAddressParser.ParseDomain(String data, Int32& index)
+   at System.Net.Mail.MailAddressParser.ParseAddress(String data, Boolean expectMultipleAddresses, Int32& index)
+   at System.Net.Mail.MailAddressParser.ParseAddress(String data)
+   at System.Net.Mail.MailAddress..ctor(String address, String displayName, Encoding displayNameEncoding)
+   at System.Net.Mail.MailAddress..ctor(String address)
+   at CNXDEVSOFTCORE.Controller.Surface.SendFormController.SetContactFormMessage(String name, String email, String title, String detail, String mailFrom)
+   at CNXDEVSOFTCORE.Controller.Surface.SendFormController.SubmitContactForm(String name, String email, String title, String detail, String mailFromUmbraco)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<InvokeActionMethodWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__19()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__3(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

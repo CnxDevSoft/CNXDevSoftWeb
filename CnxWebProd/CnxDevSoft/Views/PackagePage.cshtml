@@ -1,0 +1,64 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+}
+
+@section MenuScript{
+	<script type="text/javascript"  src="/scripts/menu.js"></script>
+}
+
+@section TopMenu{
+	<div class="content">
+	<div class="header">
+		<div class="wrap">
+		      <header id="topnav">
+			        <nav class="keep-nav-closed">
+			        		 <ul>
+			        		 	<li><a href="http://cnxdevsoft.com/#home">@Umbraco.GetDictionaryValue("Homepage")</a></li>
+								<li><a title="CNX develop software" href="http://cnxdevsoft.com/#team">@Umbraco.GetDictionaryValue("OurServices")</a></li>
+								@*<li><a title="CNX develop software" href="#ourstory" class="scroll">@Umbraco.GetDictionaryValue("Portfolio")</a></li>*@
+								<li><a title="CNX develop software" href="http://cnxdevsoft.com/#blog">@Umbraco.GetDictionaryValue("AboutUs")</a></li>
+								<li><a title="CNX develop software" href="http://cnxdevsoft.com/#contact">@Umbraco.GetDictionaryValue("ContactUS")</a></li>								
+								<div class="clear"> </div>
+							</ul>
+		        	</nav>
+			         <div id="Logo"><a href="/"><img alt="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม่" src="/images/logo3.png" title="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม่"></a></div>
+			        	<a title="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม่" href="#" id="navbtn">Nav Menu</a>
+			        <div class="clear"> </div>
+		        </header>
+		    </div>
+		</div>
+	</div><!--End content-->
+	
+}
+
+@section MainContent{
+			
+						
+	<div class="package">
+
+			
+
+        <div class="content-blog">
+            <div class="package-title" style="background-color:#@Model.Content.GetPropertyValue("backgroundTitle")">@Model.Content.GetPropertyValue("packageTitle")</div>
+            <div class="box-left">
+				
+				@Html.Raw(@Model.Content.GetPropertyValue("packageContent"))
+
+            </div>
+            <!--end box-left-->
+            <div class="box-right">
+				
+                
+				<img src="@Umbraco.Media(Model.Content.GetPropertyValue("packageImage")).umbracoFile" alt="CNX develop software | ทีมพัฒนาเว็บ รับทำเว็บไซต์ ออกแบบเว็บไซด์ ราคาถูก เชียงใหม" />
+
+            </div>
+            <!--end box-right-->
+
+        </div>
+        <!--End Content-blog-->
+    </div>
+    <!--End wrap-->
+
+				
+}

@@ -1,0 +1,154 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<div class="pricing-grids" id="Promotion">
+					<h1>@Umbraco.GetDictionaryValue("Promotion")</h1>
+					<hr/>
+						<div class="pricing-grid black">
+							
+							<div class="package-content">
+									<div class="newpromotion-pic">
+										<img alt="แพ็คเกจ S: รับทำเว็บไซด์ ออกแบบเว็บไซด์ เชียงใหม่" title="แพ็คเกจ M: รับทำเว็บไซด์ ออกแบบเว็บไซด์ เชียงใหม่" src="/images/new-promotion.gif" />
+										<h2><a title="CNX develop software" href="s-package/" target="_blank">@Model.Content.DescendantOrSelf("PackagePage").GetPropertyValue("packageHomeTitle")</a></h2>
+										
+									</div>
+									<div class="price-value">
+										
+										<a title="CNX develop software" class="open-popup-link" href="#test-modal"><div>Content Website </div><div>@Umbraco.GetDictionaryValue("General Website")</div></a>
+										<div id="test-modal" class="white-popup-block mfp-hide">
+									<h1>Modal dialog</h1>
+									<p>You won't be able to dismiss this by usual means (escape or click button), but you can close it programatically based on user choices or actions.</p>
+									<p>
+									<a class="popup-modal-dismiss" href="#">Dismiss</a>
+									</p>
+										<img src="/images/slider2.jpg" alt="CNX develop software"/>
+									</div>
+								</div>
+	
+
+								@Model.Content.DescendantOrSelf("PackagePage").GetPropertyValue("packageHomeDetail")
+							
+								
+										
+							</div><!--End package-content-->
+	
+							<div class="cart">
+								<a title="CNX develop software" class="popup-with-zoom-anim" href="@Model.Content.DescendantOrSelf("PackagePage").Url" target="_blank">@Umbraco.GetDictionaryValue("Detail")</a>
+							</div>
+						</div>
+									
+						<div class="pricing-grid green">
+							
+							<div class="package-content">
+								<div class="newpromotion-pic">
+									<img alt="แพ็คเกจ M: รับทำเว็บไซด์ ออกแบบเว็บไซด์ เชียงใหม่" title="แพ็คเกจ M: รับทำเว็บไซด์ ออกแบบเว็บไซด์ เชียงใหม่" src="/images/new-promotion.gif" />
+									<h2><a title="CNX develop software" href="m-package/" target="_blank">@Model.Content.DescendantOrSelf("PackagePage").Next(1).GetPropertyValue("packageHomeTitle")</a></h2>
+								</div>
+								
+								<div class="price-value">
+									<a title="CNX develop software" class="open-popup-link" href="#test-modal2"><div>Responsive Website Design</div><div> @Umbraco.GetDictionaryValue("Website for display on mobile phones")</div></a>
+									<div id="test-modal2" class="white-popup-block mfp-hide">
+									<h1>Modal dialog</h1>
+									<p>You won't be able to dismiss this by usual means (escape or click button), but you can close it programatically based on user choices or actions.</p>
+									<p>
+									<a class="popup-modal-dismiss" href="#">Dismiss</a>
+									</p>
+										<img src="/images/slider3.jpg" alt="CNX develop software"/>
+									</div>		
+								</div>
+										
+										
+								@Model.Content.DescendantOrSelf("PackagePage").Next(1).GetPropertyValue("packageHomeDetail")
+										
+										
+							</div><!--End package-content-->
+	
+							<div class="cart">
+								<a title="CNX develop software" class="popup-with-zoom-anim" href="@Model.Content.DescendantOrSelf("PackagePage").Next(1).Url" target="_blank">@Umbraco.GetDictionaryValue("Detail")</a>
+							</div>
+						</div>
+						<div class="pricing-grid blue">
+							<div class="package-content">
+								<div class="newpromotion-pic">
+									<h2><a title="CNX develop software" href="premium-package/" target="_blank">@Model.Content.DescendantOrSelf("PackagePage").Next(2).GetPropertyValue("packageHomeTitle")</a></h2>
+								</div>
+								<div class="price-value">
+									<a title="CNX develop software" class="open-popup-link" href="#test-modal3"><div>Custom Website</div><div>@Umbraco.GetDictionaryValue("Website that you customized")</div></a>
+									<div id="test-modal3" class="white-popup-block mfp-hide">
+									<h1>Modal dialog</h1>
+									<p>You won't be able to dismiss this by usual means (escape or click button), but you can close it programatically based on user choices or actions.</p>
+									<p>
+									<a class="popup-modal-dismiss" href="#">Dismiss</a>
+									</p>
+										<img src="/images/slider2.jpg" alt="CNX develop software"/>
+									</div>
+								</div>
+										
+										
+								@Model.Content.DescendantOrSelf("PackagePage").Next(2).GetPropertyValue("packageHomeDetail")																						
+										
+										
+							</div><!--End package-content-->
+	
+							<div class="cart">
+								<a title="CNX develop software" class="popup-with-zoom-anim" href="@Model.Content.DescendantOrSelf("PackagePage").Next(2).Url" target="_blank">@Umbraco.GetDictionaryValue("Detail")</a>
+							</div>
+						</div>
+							<div class="clear"> </div>
+							<!-----pop-up-grid---->
+								 <div id="small-dialog" class="mfp-hide">
+									<div class="pop_up">
+									 	<div class="payment-online-form-left">
+											<form>
+												<h4><span class="shipping"> </span>Shipping</h4>
+												<ul>
+													<li><input class="text-box-dark" type="text" value="Frist Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Frist Name';}"></li>
+													<li><input class="text-box-dark" type="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></li>
+												</ul>
+												<ul>
+													<li><input class="text-box-dark" type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></li>
+													<li><input class="text-box-dark" type="text" value="Company Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Company Name';}"></li>
+												</ul>
+												<ul>
+													<li><input class="text-box-dark" type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}"></li>
+													<li><input class="text-box-dark" type="text" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}"></li>
+													<div class="clear"> </div>
+												</ul>
+												<div class="clear"> </div>
+											<ul class="payment-type">
+												<h4><span class="payment"> </span> Payments</h4>
+												<li><span class="col_checkbox">
+													<input id="3" class="css-checkbox1" type="checkbox">
+													<label for="3" name="demo_lbl_1" class="css-label1"> </label>
+													<a title="CNX develop software" class="visa" href="#"> </a>
+													</span>
+													
+												</li>
+												<li>
+													<span class="col_checkbox">
+														<input id="4" class="css-checkbox2" type="checkbox">
+														<label for="4" name="demo_lbl_2" class="css-label2"> </label>
+														<a title="CNX develop software" class="paypal" href="#"> </a>
+													</span>
+												</li>
+												<div class="clear"> </div>
+											</ul>
+												<ul>
+													<li><input class="text-box-dark" type="text" value="Card Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}"></li>
+													<li><input class="text-box-dark" type="text" value="Name on card" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name on card';}"></li>
+													<div class="clear"> </div>
+												</ul>
+												<ul>
+													<li><input class="text-box-light hasDatepicker" type="text" id="datepicker" value="Expiration Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Expiration Date';}"><em class="pay-date"> </em></li>
+													<li><input class="text-box-dark" type="text" value="Security Code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}"></li>
+													<div class="clear"> </div>
+												</ul>
+												<ul class="payment-sendbtns">
+													<li><input type="reset" value="Cancel"></li>
+													<li><input type="submit" value="Process order"></li>
+												</ul>
+												<div class="clear"> </div>
+											</form>
+										</div>
+						  			</div>
+								</div>
+								<!-----pop-up-grid---->
+							</div>

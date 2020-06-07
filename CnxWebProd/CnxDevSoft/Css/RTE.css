@@ -1,0 +1,27 @@
+p
+{
+	color: #959695;
+    font-size: 16px;
+    line-height: 1.9em;
+    text-align: justify;
+    
+}
+
+strong
+{
+	   color: #f56924;
+    font-weight: bold;
+}
+
+ul{
+	background: #f2ebde;
+}
+
+ul li{
+	list-style:none;
+	color: #485460;
+	display: block;
+	font-size: 1.3em;
+	padding: 1.2em 0;
+	text-align: center;
+	}/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

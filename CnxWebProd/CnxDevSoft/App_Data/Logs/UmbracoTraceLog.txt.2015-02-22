@@ -1,0 +1,7 @@
+﻿2015-02-22 10:21:46,364 [6] INFO  umbraco.content - [Thread 61] Loading content from disk cache...
+2015-02-22 10:21:46,536 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-02-22 10:21:46,552 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 22 (took 23ms)
+2015-02-22 10:21:47,020 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-02-22 10:21:47,020 [6] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 43 (took 0ms)
+2015-02-22 17:38:53,723 [6] INFO  umbraco.BusinessLogic.Log - [Thread 39] Log scrubbed.  Removed all items older than 2014-12-24 17:38:53
+2015-02-22 17:42:13,484 [6] WARN  Umbraco.Web.Mvc.RenderMvcController - [Thread 39] No physical template file was found for template Global
