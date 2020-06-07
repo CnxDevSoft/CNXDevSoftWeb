@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css'
+
+$white: #fff
+$black: #000
+$primary: #f58106
+$white-90: rgba($white, 0.9)
+$white-60: rgba($white, 0.6)
+$black-87: rgba($black, 0.87)
+$black-60: rgba($black, 0.6)
+$black-32: rgba($black, 0.32)
+
+body,html
+  font: 'Open Sans', arial, sans-serif
+
+.bg-dark
+  background-color: $black-87 !important
+
+.hightlight
+  color: $primary !important
+
+.nav-link
+  color: $white-60
+  text-decoration: none
+  letter-spacing: 0.05em
+  display: inline-block
+  position: relative
+  &:after
+    background: none repeat scroll 0 0 transparent
+    bottom: 0
+    content: ""
+    display: block
+    height: 2px
+    left: 50%
+    position: absolute
+    background: $primary
+    transition: width 0.3s ease 0s, left 0.3s ease 0s
+    width: 0
+  &:hover
+    color: $primary !important
+    &:after
+      width: 100%
+      left: 0
+
+.nav-link.active
+    color: $primary !important
+    &:after
+      width: 100%
+      left: 0
