@@ -1,4 +1,5 @@
 ﻿using Cnxdevsoft.Service.Common.Interface;
+using Cnxdevsoft.Service.Common.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace CnxdevsoftUmbraco.Controller
         public override ActionResult Index(ContentModel model)
         {
             // you are in control here!
-
+            var cnxdevsoftService = new CnxdevsoftService();
             // return a 'model' to the selected template/view for this page.
             return CurrentTemplate(model);
         }
