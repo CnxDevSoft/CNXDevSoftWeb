@@ -1,4 +1,3 @@
 **/node_modules
-**/.vs/**
-**/CnxdevsoftUmbraco/.vs/**
-**/CnxdevsoftUmbraco/CnxdevsoftUmbraco/bin/**
+**/.vs
+**/CnxdevsoftUmbraco/**
