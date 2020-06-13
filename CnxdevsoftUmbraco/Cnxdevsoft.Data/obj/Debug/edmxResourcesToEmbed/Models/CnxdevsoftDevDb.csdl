@@ -1,0 +1,1569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CnxDevSoftDevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cmsContentNu">
+    <Key>
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="published" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="published" Type="Boolean" Nullable="false" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rv" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_cmsContentNu_umbracoContent_nodeId" FromRole="cmsContentNu" ToRole="umbracoContent" />
+  </EntityType>
+  <EntityType Name="cmsContentType">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="thumbnail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="isContainer" Type="Boolean" Nullable="false" />
+    <Property Name="isElement" Type="Boolean" Nullable="false" />
+    <Property Name="allowAtRoot" Type="Boolean" Nullable="false" />
+    <Property Name="variations" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_cmsContentType_umbracoNode_id" FromRole="cmsContentType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsContentTypeAllowedContentType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="AllowedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AllowedId" Type="Int32" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cmsDictionary">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="parent" Type="Guid" />
+    <Property Name="key" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cmsDocumentType">
+    <Key>
+      <PropertyRef Name="contentTypeNodeId" />
+      <PropertyRef Name="templateNodeId" />
+    </Key>
+    <Property Name="contentTypeNodeId" Type="Int32" Nullable="false" />
+    <Property Name="templateNodeId" Type="Int32" Nullable="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_cmsDocumentType_umbracoNode_id" FromRole="cmsDocumentType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsLanguageText">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="languageId" Type="Int32" Nullable="false" />
+    <Property Name="UniqueId" Type="Guid" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_cmsLanguageText_umbracoLanguage_id" FromRole="cmsLanguageText" ToRole="umbracoLanguage" />
+  </EntityType>
+  <EntityType Name="cmsMacro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uniqueId" Type="Guid" Nullable="false" />
+    <Property Name="macroUseInEditor" Type="Boolean" Nullable="false" />
+    <Property Name="macroRefreshRate" Type="Int32" Nullable="false" />
+    <Property Name="macroAlias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="macroName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="macroCacheByPage" Type="Boolean" Nullable="false" />
+    <Property Name="macroCachePersonalized" Type="Boolean" Nullable="false" />
+    <Property Name="macroDontRender" Type="Boolean" Nullable="false" />
+    <Property Name="macroSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="macroType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cmsMacroProperty" Relationship="Self.FK_cmsMacroProperty_cmsMacro_id" FromRole="cmsMacro" ToRole="cmsMacroProperty" />
+  </EntityType>
+  <EntityType Name="cmsMacroProperty">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uniquePropertyId" Type="Guid" Nullable="false" />
+    <Property Name="editorAlias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="macro" Type="Int32" Nullable="false" />
+    <Property Name="macroPropertySortOrder" Type="Int32" Nullable="false" />
+    <Property Name="macroPropertyAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="macroPropertyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="cmsMacro" Relationship="Self.FK_cmsMacroProperty_cmsMacro_id" FromRole="cmsMacroProperty" ToRole="cmsMacro" />
+  </EntityType>
+  <EntityType Name="cmsMember">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_cmsMember_umbracoContent_nodeId" FromRole="cmsMember" ToRole="umbracoContent" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.cmsMember2MemberGroup" FromRole="cmsMember" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsMemberType">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NodeId" Type="Int32" Nullable="false" />
+    <Property Name="propertytypeId" Type="Int32" Nullable="false" />
+    <Property Name="memberCanEdit" Type="Boolean" Nullable="false" />
+    <Property Name="viewOnProfile" Type="Boolean" Nullable="false" />
+    <Property Name="isSensitive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_cmsMemberType_umbracoNode_id" FromRole="cmsMemberType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="cmsPropertyType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dataTypeId" Type="Int32" Nullable="false" />
+    <Property Name="contentTypeId" Type="Int32" Nullable="false" />
+    <Property Name="propertyTypeGroupId" Type="Int32" />
+    <Property Name="Alias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sortOrder" Type="Int32" Nullable="false" />
+    <Property Name="mandatory" Type="Boolean" Nullable="false" />
+    <Property Name="mandatoryMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="validationRegExp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="validationRegExpMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="variations" Type="Int32" Nullable="false" />
+    <Property Name="UniqueID" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyTypeGroup" Relationship="Self.FK_cmsPropertyType_cmsPropertyTypeGroup_id" FromRole="cmsPropertyType" ToRole="cmsPropertyTypeGroup" />
+    <NavigationProperty Name="umbracoDataType" Relationship="Self.FK_cmsPropertyType_umbracoDataType_nodeId" FromRole="cmsPropertyType" ToRole="umbracoDataType" />
+    <NavigationProperty Name="cmsTagRelationship" Relationship="Self.FK_cmsTagRelationship_cmsPropertyType" FromRole="cmsPropertyType" ToRole="cmsTagRelationship" />
+    <NavigationProperty Name="umbracoPropertyData" Relationship="Self.FK_umbracoPropertyData_cmsPropertyType_id" FromRole="cmsPropertyType" ToRole="umbracoPropertyData" />
+  </EntityType>
+  <EntityType Name="cmsPropertyTypeGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contenttypeNodeId" Type="Int32" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sortorder" Type="Int32" Nullable="false" />
+    <Property Name="uniqueID" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="Self.FK_cmsPropertyType_cmsPropertyTypeGroup_id" FromRole="cmsPropertyTypeGroup" ToRole="cmsPropertyType" />
+  </EntityType>
+  <EntityType Name="cmsTagRelationship">
+    <Key>
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="tagId" />
+      <PropertyRef Name="propertyTypeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="tagId" Type="Int32" Nullable="false" />
+    <Property Name="propertyTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="Self.FK_cmsTagRelationship_cmsPropertyType" FromRole="cmsTagRelationship" ToRole="cmsPropertyType" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_cmsTagRelationship_cmsContent" FromRole="cmsTagRelationship" ToRole="umbracoContent" />
+    <NavigationProperty Name="cmsTags" Relationship="Self.FK_cmsTagRelationship_cmsTags_id" FromRole="cmsTagRelationship" ToRole="cmsTags" />
+  </EntityType>
+  <EntityType Name="cmsTags">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="languageId" Type="Int32" />
+    <Property Name="tag" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="cmsTagRelationship" Relationship="Self.FK_cmsTagRelationship_cmsTags_id" FromRole="cmsTags" ToRole="cmsTagRelationship" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_cmsTags_umbracoLanguage_id" FromRole="cmsTags" ToRole="umbracoLanguage" />
+  </EntityType>
+  <EntityType Name="cmsTemplate">
+    <Key>
+      <PropertyRef Name="pk" />
+    </Key>
+    <Property Name="pk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_cmsTemplate_umbracoNode" FromRole="cmsTemplate" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="umbracoAccess">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="loginNodeId" Type="Int32" Nullable="false" />
+    <Property Name="noAccessNodeId" Type="Int32" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoAccess_umbracoNode_id" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="Self.FK_umbracoAccess_umbracoNode_id1" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode2" Relationship="Self.FK_umbracoAccess_umbracoNode_id2" FromRole="umbracoAccess" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoAccessRule" Relationship="Self.FK_umbracoAccessRule_umbracoAccess_id" FromRole="umbracoAccess" ToRole="umbracoAccessRule" />
+  </EntityType>
+  <EntityType Name="umbracoAccessRule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="accessId" Type="Guid" Nullable="false" />
+    <Property Name="ruleValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ruleType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="umbracoAccess" Relationship="Self.FK_umbracoAccessRule_umbracoAccess_id" FromRole="umbracoAccessRule" ToRole="umbracoAccess" />
+  </EntityType>
+  <EntityType Name="umbracoAudit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="performingUserId" Type="Int32" Nullable="false" />
+    <Property Name="performingDetails" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="performingIp" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="eventDateUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="affectedUserId" Type="Int32" Nullable="false" />
+    <Property Name="affectedDetails" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="eventType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="eventDetails" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoCacheInstruction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="utcStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="jsonInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="originated" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="instructionCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="umbracoConsent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="current" Type="Boolean" Nullable="false" />
+    <Property Name="source" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="context" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="action" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="umbracoContent">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="contentTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cmsContentNu" Relationship="Self.FK_cmsContentNu_umbracoContent_nodeId" FromRole="umbracoContent" ToRole="cmsContentNu" />
+    <NavigationProperty Name="cmsMember" Relationship="Self.FK_cmsMember_umbracoContent_nodeId" FromRole="umbracoContent" ToRole="cmsMember" />
+    <NavigationProperty Name="cmsTagRelationship" Relationship="Self.FK_cmsTagRelationship_cmsContent" FromRole="umbracoContent" ToRole="cmsTagRelationship" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoContent_umbracoNode_id" FromRole="umbracoContent" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoContentSchedule" Relationship="Self.FK_umbracoContentSchedule_umbracoContent_nodeId" FromRole="umbracoContent" ToRole="umbracoContentSchedule" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoContentVersion_umbracoContent_nodeId" FromRole="umbracoContent" ToRole="umbracoContentVersion" />
+    <NavigationProperty Name="umbracoDocument" Relationship="Self.FK_umbracoDocument_umbracoContent_nodeId" FromRole="umbracoContent" ToRole="umbracoDocument" />
+  </EntityType>
+  <EntityType Name="umbracoContentSchedule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="languageId" Type="Int32" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_umbracoContentSchedule_umbracoContent_nodeId" FromRole="umbracoContentSchedule" ToRole="umbracoContent" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_umbracoContentSchedule_umbracoLanguage_id" FromRole="umbracoContentSchedule" ToRole="umbracoLanguage" />
+  </EntityType>
+  <EntityType Name="umbracoContentVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="versionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="current" Type="Boolean" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_umbracoContentVersion_umbracoContent_nodeId" FromRole="umbracoContentVersion" ToRole="umbracoContent" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoContentVersion_umbracoUser_id" FromRole="umbracoContentVersion" ToRole="umbracoUser" />
+    <NavigationProperty Name="umbracoContentVersionCultureVariation" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id" FromRole="umbracoContentVersion" ToRole="umbracoContentVersionCultureVariation" />
+    <NavigationProperty Name="umbracoDocumentVersion" Relationship="Self.FK_umbracoDocumentVersion_umbracoContentVersion_id" FromRole="umbracoContentVersion" ToRole="umbracoDocumentVersion" />
+    <NavigationProperty Name="umbracoMediaVersion" Relationship="Self.FK_umbracoMediaVersion_umbracoContentVersion_id" FromRole="umbracoContentVersion" ToRole="umbracoMediaVersion" />
+    <NavigationProperty Name="umbracoPropertyData" Relationship="Self.FK_umbracoPropertyData_umbracoContentVersion_id" FromRole="umbracoContentVersion" ToRole="umbracoPropertyData" />
+  </EntityType>
+  <EntityType Name="umbracoContentVersionCultureVariation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="versionId" Type="Int32" Nullable="false" />
+    <Property Name="languageId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="availableUserId" Type="Int32" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id" FromRole="umbracoContentVersionCultureVariation" ToRole="umbracoContentVersion" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoLanguage_id" FromRole="umbracoContentVersionCultureVariation" ToRole="umbracoLanguage" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoUser_id" FromRole="umbracoContentVersionCultureVariation" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoDataType">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="propertyEditorAlias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dbType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="config" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="Self.FK_cmsPropertyType_umbracoDataType_nodeId" FromRole="umbracoDataType" ToRole="cmsPropertyType" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoDataType_umbracoNode_id" FromRole="umbracoDataType" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="umbracoDocument">
+    <Key>
+      <PropertyRef Name="nodeId" />
+    </Key>
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="published" Type="Boolean" Nullable="false" />
+    <Property Name="edited" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_umbracoDocument_umbracoContent_nodeId" FromRole="umbracoDocument" ToRole="umbracoContent" />
+  </EntityType>
+  <EntityType Name="umbracoDocumentCultureVariation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="languageId" Type="Int32" Nullable="false" />
+    <Property Name="edited" Type="Boolean" Nullable="false" />
+    <Property Name="available" Type="Boolean" Nullable="false" />
+    <Property Name="published" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_umbracoDocumentCultureVariation_umbracoLanguage_id" FromRole="umbracoDocumentCultureVariation" ToRole="umbracoLanguage" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoDocumentCultureVariation_umbracoNode_id" FromRole="umbracoDocumentCultureVariation" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="umbracoDocumentVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="templateId" Type="Int32" />
+    <Property Name="published" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoDocumentVersion_umbracoContentVersion_id" FromRole="umbracoDocumentVersion" ToRole="umbracoContentVersion" />
+  </EntityType>
+  <EntityType Name="umbracoDomain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="domainDefaultLanguage" Type="Int32" />
+    <Property Name="domainRootStructureID" Type="Int32" />
+    <Property Name="domainName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoDomain_umbracoNode_id" FromRole="umbracoDomain" ToRole="umbracoNode" />
+  </EntityType>
+  <EntityType Name="umbracoExternalLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="loginProvider" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="providerKey" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="umbracoKeyValue">
+    <Key>
+      <PropertyRef Name="key" />
+    </Key>
+    <Property Name="key" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="updated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="umbracoLanguage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="languageISOCode" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="languageCultureName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="isDefaultVariantLang" Type="Boolean" Nullable="false" />
+    <Property Name="mandatory" Type="Boolean" Nullable="false" />
+    <Property Name="fallbackLanguageId" Type="Int32" />
+    <NavigationProperty Name="cmsLanguageText" Relationship="Self.FK_cmsLanguageText_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="cmsLanguageText" />
+    <NavigationProperty Name="cmsTags" Relationship="Self.FK_cmsTags_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="cmsTags" />
+    <NavigationProperty Name="umbracoContentSchedule" Relationship="Self.FK_umbracoContentSchedule_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="umbracoContentSchedule" />
+    <NavigationProperty Name="umbracoContentVersionCultureVariation" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="umbracoContentVersionCultureVariation" />
+    <NavigationProperty Name="umbracoDocumentCultureVariation" Relationship="Self.FK_umbracoDocumentCultureVariation_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="umbracoDocumentCultureVariation" />
+    <NavigationProperty Name="umbracoLanguage1" Relationship="Self.FK_umbracoLanguage_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="umbracoLanguage1" />
+    <NavigationProperty Name="umbracoLanguage2" Relationship="Self.FK_umbracoLanguage_umbracoLanguage_id" FromRole="umbracoLanguage1" ToRole="umbracoLanguage" />
+    <NavigationProperty Name="umbracoPropertyData" Relationship="Self.FK_umbracoPropertyData_umbracoLanguage_id" FromRole="umbracoLanguage" ToRole="umbracoPropertyData" />
+  </EntityType>
+  <EntityType Name="umbracoLock">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="umbracoLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="NodeId" Type="Int32" Nullable="false" />
+    <Property Name="entityType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Datestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="logHeader" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="logComment" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="parameters" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoLog_umbracoUser_id" FromRole="umbracoLog" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoMediaVersion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoMediaVersion_umbracoContentVersion_id" FromRole="umbracoMediaVersion" ToRole="umbracoContentVersion" />
+  </EntityType>
+  <EntityType Name="umbracoNode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uniqueId" Type="Guid" Nullable="false" />
+    <Property Name="parentId" Type="Int32" Nullable="false" />
+    <Property Name="level" Type="Int32" Nullable="false" />
+    <Property Name="path" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sortOrder" Type="Int32" Nullable="false" />
+    <Property Name="trashed" Type="Boolean" Nullable="false" />
+    <Property Name="nodeUser" Type="Int32" />
+    <Property Name="text" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nodeObjectType" Type="Guid" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="cmsContentType" Relationship="Self.FK_cmsContentType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsContentType" />
+    <NavigationProperty Name="cmsDocumentType" Relationship="Self.FK_cmsDocumentType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsDocumentType" />
+    <NavigationProperty Name="cmsMemberType" Relationship="Self.FK_cmsMemberType_umbracoNode_id" FromRole="umbracoNode" ToRole="cmsMemberType" />
+    <NavigationProperty Name="cmsTemplate" Relationship="Self.FK_cmsTemplate_umbracoNode" FromRole="umbracoNode" ToRole="cmsTemplate" />
+    <NavigationProperty Name="umbracoAccess" Relationship="Self.FK_umbracoAccess_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoAccess1" Relationship="Self.FK_umbracoAccess_umbracoNode_id1" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoAccess2" Relationship="Self.FK_umbracoAccess_umbracoNode_id2" FromRole="umbracoNode" ToRole="umbracoAccess" />
+    <NavigationProperty Name="umbracoContent" Relationship="Self.FK_umbracoContent_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoContent" />
+    <NavigationProperty Name="umbracoDataType" Relationship="Self.FK_umbracoDataType_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoDataType" />
+    <NavigationProperty Name="umbracoDocumentCultureVariation" Relationship="Self.FK_umbracoDocumentCultureVariation_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoDocumentCultureVariation" />
+    <NavigationProperty Name="umbracoDomain" Relationship="Self.FK_umbracoDomain_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoDomain" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="Self.FK_startContentId_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup" />
+    <NavigationProperty Name="umbracoUserGroup1" Relationship="Self.FK_startMediaId_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup" />
+    <NavigationProperty Name="umbracoNode1" Relationship="Self.FK_umbracoNode_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoNode1" />
+    <NavigationProperty Name="umbracoNode2" Relationship="Self.FK_umbracoNode_umbracoNode_id" FromRole="umbracoNode1" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoNode_umbracoUser_id" FromRole="umbracoNode" ToRole="umbracoUser" />
+    <NavigationProperty Name="umbracoRelation" Relationship="Self.FK_umbracoRelation_umbracoNode" FromRole="umbracoNode" ToRole="umbracoRelation" />
+    <NavigationProperty Name="umbracoRelation1" Relationship="Self.FK_umbracoRelation_umbracoNode1" FromRole="umbracoNode" ToRole="umbracoRelation" />
+    <NavigationProperty Name="umbracoUser2NodeNotify" Relationship="Self.FK_umbracoUser2NodeNotify_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUser2NodeNotify" />
+    <NavigationProperty Name="umbracoUserGroup2NodePermission" Relationship="Self.FK_umbracoUserGroup2NodePermission_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserGroup2NodePermission" />
+    <NavigationProperty Name="umbracoUserStartNode" Relationship="Self.FK_umbracoUserStartNode_umbracoNode_id" FromRole="umbracoNode" ToRole="umbracoUserStartNode" />
+    <NavigationProperty Name="umbracoNode11" Relationship="Self.cmsContentType2ContentType" FromRole="umbracoNode" ToRole="umbracoNode1" />
+    <NavigationProperty Name="umbracoNode3" Relationship="Self.cmsContentType2ContentType" FromRole="umbracoNode1" ToRole="umbracoNode" />
+    <NavigationProperty Name="cmsMember" Relationship="Self.cmsMember2MemberGroup" FromRole="umbracoNode" ToRole="cmsMember" />
+  </EntityType>
+  <EntityType Name="umbracoPropertyData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="versionId" Type="Int32" Nullable="false" />
+    <Property Name="propertyTypeId" Type="Int32" Nullable="false" />
+    <Property Name="languageId" Type="Int32" />
+    <Property Name="segment" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="intValue" Type="Int32" />
+    <Property Name="decimalValue" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="dateValue" Type="DateTime" Precision="3" />
+    <Property Name="varcharValue" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="textValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cmsPropertyType" Relationship="Self.FK_umbracoPropertyData_cmsPropertyType_id" FromRole="umbracoPropertyData" ToRole="cmsPropertyType" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoPropertyData_umbracoContentVersion_id" FromRole="umbracoPropertyData" ToRole="umbracoContentVersion" />
+    <NavigationProperty Name="umbracoLanguage" Relationship="Self.FK_umbracoPropertyData_umbracoLanguage_id" FromRole="umbracoPropertyData" ToRole="umbracoLanguage" />
+  </EntityType>
+  <EntityType Name="umbracoRedirectUrl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="contentKey" Type="Guid" Nullable="false" />
+    <Property Name="createDateUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="culture" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="urlHash" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="umbracoRelation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="parentId" Type="Int32" Nullable="false" />
+    <Property Name="childId" Type="Int32" Nullable="false" />
+    <Property Name="relType" Type="Int32" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoRelation_umbracoNode" FromRole="umbracoRelation" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="Self.FK_umbracoRelation_umbracoNode1" FromRole="umbracoRelation" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoRelationType" Relationship="Self.FK_umbracoRelation_umbracoRelationType_id" FromRole="umbracoRelation" ToRole="umbracoRelationType" />
+  </EntityType>
+  <EntityType Name="umbracoRelationType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeUniqueId" Type="Guid" Nullable="false" />
+    <Property Name="dual" Type="Boolean" Nullable="false" />
+    <Property Name="parentObjectType" Type="Guid" />
+    <Property Name="childObjectType" Type="Guid" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoRelation" Relationship="Self.FK_umbracoRelation_umbracoRelationType_id" FromRole="umbracoRelationType" ToRole="umbracoRelation" />
+  </EntityType>
+  <EntityType Name="umbracoServer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="computerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="registeredDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="lastNotifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+    <Property Name="isMaster" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="umbracoUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userDisabled" Type="Boolean" Nullable="false" />
+    <Property Name="userNoConsole" Type="Boolean" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userLogin" Type="String" MaxLength="125" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="passwordConfig" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="userEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userLanguage" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="securityStampToken" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="failedLoginAttempts" Type="Int32" />
+    <Property Name="lastLockoutDate" Type="DateTime" Precision="3" />
+    <Property Name="lastPasswordChangeDate" Type="DateTime" Precision="3" />
+    <Property Name="lastLoginDate" Type="DateTime" Precision="3" />
+    <Property Name="emailConfirmedDate" Type="DateTime" Precision="3" />
+    <Property Name="invitedDate" Type="DateTime" Precision="3" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="tourData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoContentVersion" Relationship="Self.FK_umbracoContentVersion_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoContentVersion" />
+    <NavigationProperty Name="umbracoContentVersionCultureVariation" Relationship="Self.FK_umbracoContentVersionCultureVariation_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoContentVersionCultureVariation" />
+    <NavigationProperty Name="umbracoLog" Relationship="Self.FK_umbracoLog_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoLog" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoNode_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser2NodeNotify" Relationship="Self.FK_umbracoUser2NodeNotify_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoUser2NodeNotify" />
+    <NavigationProperty Name="umbracoUserLogin" Relationship="Self.FK_umbracoUserLogin_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoUserLogin" />
+    <NavigationProperty Name="umbracoUserStartNode" Relationship="Self.FK_umbracoUserStartNode_umbracoUser_id" FromRole="umbracoUser" ToRole="umbracoUserStartNode" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="Self.umbracoUser2UserGroup" FromRole="umbracoUser" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUser2NodeNotify">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="action" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="action" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoUser2NodeNotify_umbracoNode_id" FromRole="umbracoUser2NodeNotify" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoUser2NodeNotify_umbracoUser_id" FromRole="umbracoUser2NodeNotify" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userGroupAlias" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userGroupName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userGroupDefaultPermissions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="startContentId" Type="Int32" />
+    <Property Name="startMediaId" Type="Int32" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_startContentId_umbracoNode_id" FromRole="umbracoUserGroup" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoNode1" Relationship="Self.FK_startMediaId_umbracoNode_id" FromRole="umbracoUserGroup" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUserGroup2App" Relationship="Self.FK_umbracoUserGroup2App_umbracoUserGroup_id" FromRole="umbracoUserGroup" ToRole="umbracoUserGroup2App" />
+    <NavigationProperty Name="umbracoUserGroup2NodePermission" Relationship="Self.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" FromRole="umbracoUserGroup" ToRole="umbracoUserGroup2NodePermission" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.umbracoUser2UserGroup" FromRole="umbracoUserGroup" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup2App">
+    <Key>
+      <PropertyRef Name="userGroupId" />
+      <PropertyRef Name="app" />
+    </Key>
+    <Property Name="userGroupId" Type="Int32" Nullable="false" />
+    <Property Name="app" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="Self.FK_umbracoUserGroup2App_umbracoUserGroup_id" FromRole="umbracoUserGroup2App" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUserGroup2NodePermission">
+    <Key>
+      <PropertyRef Name="userGroupId" />
+      <PropertyRef Name="nodeId" />
+      <PropertyRef Name="permission" />
+    </Key>
+    <Property Name="userGroupId" Type="Int32" Nullable="false" />
+    <Property Name="nodeId" Type="Int32" Nullable="false" />
+    <Property Name="permission" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoUserGroup2NodePermission_umbracoNode_id" FromRole="umbracoUserGroup2NodePermission" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUserGroup" Relationship="Self.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" FromRole="umbracoUserGroup2NodePermission" ToRole="umbracoUserGroup" />
+  </EntityType>
+  <EntityType Name="umbracoUserLogin">
+    <Key>
+      <PropertyRef Name="sessionId" />
+    </Key>
+    <Property Name="sessionId" Type="Guid" Nullable="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="loggedInUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="lastValidatedUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="loggedOutUtc" Type="DateTime" Precision="3" />
+    <Property Name="ipAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoUserLogin_umbracoUser_id" FromRole="umbracoUserLogin" ToRole="umbracoUser" />
+  </EntityType>
+  <EntityType Name="umbracoUserStartNode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="startNode" Type="Int32" Nullable="false" />
+    <Property Name="startNodeType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="umbracoNode" Relationship="Self.FK_umbracoUserStartNode_umbracoNode_id" FromRole="umbracoUserStartNode" ToRole="umbracoNode" />
+    <NavigationProperty Name="umbracoUser" Relationship="Self.FK_umbracoUserStartNode_umbracoUser_id" FromRole="umbracoUserStartNode" ToRole="umbracoUser" />
+  </EntityType>
+  <Association Name="FK_cmsContentNu_umbracoContent_nodeId">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cmsContentNu" Type="Self.cmsContentNu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="cmsContentNu">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsContentType_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="cmsContentType" Type="Self.cmsContentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsContentType">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsDocumentType_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="cmsDocumentType" Type="Self.cmsDocumentType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsDocumentType">
+        <PropertyRef Name="contentTypeNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsLanguageText_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="1" />
+    <End Role="cmsLanguageText" Type="Self.cmsLanguageText" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsLanguageText">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMacroProperty_cmsMacro_id">
+    <End Role="cmsMacro" Type="Self.cmsMacro" Multiplicity="1" />
+    <End Role="cmsMacroProperty" Type="Self.cmsMacroProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsMacro">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsMacroProperty">
+        <PropertyRef Name="macro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMember_umbracoContent_nodeId">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1" />
+    <End Role="cmsMember" Type="Self.cmsMember" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="cmsMember">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsMemberType_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="cmsMemberType" Type="Self.cmsMemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsMemberType">
+        <PropertyRef Name="NodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsPropertyType_cmsPropertyTypeGroup_id">
+    <End Role="cmsPropertyTypeGroup" Type="Self.cmsPropertyTypeGroup" Multiplicity="0..1" />
+    <End Role="cmsPropertyType" Type="Self.cmsPropertyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyTypeGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsPropertyType">
+        <PropertyRef Name="propertyTypeGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsPropertyType_umbracoDataType_nodeId">
+    <End Role="umbracoDataType" Type="Self.umbracoDataType" Multiplicity="1" />
+    <End Role="cmsPropertyType" Type="Self.cmsPropertyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoDataType">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="cmsPropertyType">
+        <PropertyRef Name="dataTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTagRelationship_cmsPropertyType">
+    <End Role="cmsPropertyType" Type="Self.cmsPropertyType" Multiplicity="1" />
+    <End Role="cmsTagRelationship" Type="Self.cmsTagRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTagRelationship">
+        <PropertyRef Name="propertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoPropertyData_cmsPropertyType_id">
+    <End Role="cmsPropertyType" Type="Self.cmsPropertyType" Multiplicity="1" />
+    <End Role="umbracoPropertyData" Type="Self.umbracoPropertyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsPropertyType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoPropertyData">
+        <PropertyRef Name="propertyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTagRelationship_cmsContent">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1" />
+    <End Role="cmsTagRelationship" Type="Self.cmsTagRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="cmsTagRelationship">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTagRelationship_cmsTags_id">
+    <End Role="cmsTags" Type="Self.cmsTags" Multiplicity="1" />
+    <End Role="cmsTagRelationship" Type="Self.cmsTagRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cmsTags">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTagRelationship">
+        <PropertyRef Name="tagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTags_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="0..1" />
+    <End Role="cmsTags" Type="Self.cmsTags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTags">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cmsTemplate_umbracoNode">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="cmsTemplate" Type="Self.cmsTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cmsTemplate">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoAccess" Type="Self.umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id1">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoAccess" Type="Self.umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="loginNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccess_umbracoNode_id2">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoAccess" Type="Self.umbracoAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccess">
+        <PropertyRef Name="noAccessNodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoAccessRule_umbracoAccess_id">
+    <End Role="umbracoAccess" Type="Self.umbracoAccess" Multiplicity="1" />
+    <End Role="umbracoAccessRule" Type="Self.umbracoAccessRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoAccess">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoAccessRule">
+        <PropertyRef Name="accessId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContent_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentSchedule_umbracoContent_nodeId">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1" />
+    <End Role="umbracoContentSchedule" Type="Self.umbracoContentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="umbracoContentSchedule">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentVersion_umbracoContent_nodeId">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1" />
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="umbracoContentVersion">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDocument_umbracoContent_nodeId">
+    <End Role="umbracoContent" Type="Self.umbracoContent" Multiplicity="1" />
+    <End Role="umbracoDocument" Type="Self.umbracoDocument" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContent">
+        <PropertyRef Name="nodeId" />
+      </Principal>
+      <Dependent Role="umbracoDocument">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentSchedule_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="0..1" />
+    <End Role="umbracoContentSchedule" Type="Self.umbracoContentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContentSchedule">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentVersion_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="0..1" />
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContentVersion">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id">
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="1" />
+    <End Role="umbracoContentVersionCultureVariation" Type="Self.umbracoContentVersionCultureVariation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContentVersion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContentVersionCultureVariation">
+        <PropertyRef Name="versionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDocumentVersion_umbracoContentVersion_id">
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="1" />
+    <End Role="umbracoDocumentVersion" Type="Self.umbracoDocumentVersion" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContentVersion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDocumentVersion">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoMediaVersion_umbracoContentVersion_id">
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="1" />
+    <End Role="umbracoMediaVersion" Type="Self.umbracoMediaVersion" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContentVersion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoMediaVersion">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoPropertyData_umbracoContentVersion_id">
+    <End Role="umbracoContentVersion" Type="Self.umbracoContentVersion" Multiplicity="1" />
+    <End Role="umbracoPropertyData" Type="Self.umbracoPropertyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoContentVersion">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoPropertyData">
+        <PropertyRef Name="versionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentVersionCultureVariation_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="1" />
+    <End Role="umbracoContentVersionCultureVariation" Type="Self.umbracoContentVersionCultureVariation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContentVersionCultureVariation">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoContentVersionCultureVariation_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="0..1" />
+    <End Role="umbracoContentVersionCultureVariation" Type="Self.umbracoContentVersionCultureVariation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoContentVersionCultureVariation">
+        <PropertyRef Name="availableUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDataType_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoDataType" Type="Self.umbracoDataType" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDataType">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDocumentCultureVariation_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="1" />
+    <End Role="umbracoDocumentCultureVariation" Type="Self.umbracoDocumentCultureVariation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDocumentCultureVariation">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDocumentCultureVariation_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoDocumentCultureVariation" Type="Self.umbracoDocumentCultureVariation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDocumentCultureVariation">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoDomain_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="0..1" />
+    <End Role="umbracoDomain" Type="Self.umbracoDomain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoDomain">
+        <PropertyRef Name="domainRootStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoLanguage_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="0..1" />
+    <End Role="umbracoLanguage1" Type="Self.umbracoLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoLanguage1">
+        <PropertyRef Name="fallbackLanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoPropertyData_umbracoLanguage_id">
+    <End Role="umbracoLanguage" Type="Self.umbracoLanguage" Multiplicity="0..1" />
+    <End Role="umbracoPropertyData" Type="Self.umbracoPropertyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoLanguage">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoPropertyData">
+        <PropertyRef Name="languageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoLog_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="0..1" />
+    <End Role="umbracoLog" Type="Self.umbracoLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoLog">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_startContentId_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="0..1" />
+    <End Role="umbracoUserGroup" Type="Self.umbracoUserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup">
+        <PropertyRef Name="startContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_startMediaId_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="0..1" />
+    <End Role="umbracoUserGroup" Type="Self.umbracoUserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup">
+        <PropertyRef Name="startMediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoNode_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoNode1" Type="Self.umbracoNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoNode1">
+        <PropertyRef Name="parentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoNode_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="0..1" />
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoNode">
+        <PropertyRef Name="nodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoNode">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoRelation" Type="Self.umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="parentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoNode1">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoRelation" Type="Self.umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="childId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUser2NodeNotify_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoUser2NodeNotify" Type="Self.umbracoUser2NodeNotify" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUser2NodeNotify">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2NodePermission_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoUserGroup2NodePermission" Type="Self.umbracoUserGroup2NodePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2NodePermission">
+        <PropertyRef Name="nodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserStartNode_umbracoNode_id">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="1" />
+    <End Role="umbracoUserStartNode" Type="Self.umbracoUserStartNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoNode">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserStartNode">
+        <PropertyRef Name="startNode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoRelation_umbracoRelationType_id">
+    <End Role="umbracoRelationType" Type="Self.umbracoRelationType" Multiplicity="1" />
+    <End Role="umbracoRelation" Type="Self.umbracoRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoRelationType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoRelation">
+        <PropertyRef Name="relType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUser2NodeNotify_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="1" />
+    <End Role="umbracoUser2NodeNotify" Type="Self.umbracoUser2NodeNotify" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUser2NodeNotify">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserLogin_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="1" />
+    <End Role="umbracoUserLogin" Type="Self.umbracoUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserLogin">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserStartNode_umbracoUser_id">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="1" />
+    <End Role="umbracoUserStartNode" Type="Self.umbracoUserStartNode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserStartNode">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2App_umbracoUserGroup_id">
+    <End Role="umbracoUserGroup" Type="Self.umbracoUserGroup" Multiplicity="1" />
+    <End Role="umbracoUserGroup2App" Type="Self.umbracoUserGroup2App" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUserGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2App">
+        <PropertyRef Name="userGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id">
+    <End Role="umbracoUserGroup" Type="Self.umbracoUserGroup" Multiplicity="1" />
+    <End Role="umbracoUserGroup2NodePermission" Type="Self.umbracoUserGroup2NodePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="umbracoUserGroup">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="umbracoUserGroup2NodePermission">
+        <PropertyRef Name="userGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cmsContentType2ContentType">
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="*" />
+    <End Role="umbracoNode1" Type="Self.umbracoNode" Multiplicity="*" />
+  </Association>
+  <Association Name="cmsMember2MemberGroup">
+    <End Role="cmsMember" Type="Self.cmsMember" Multiplicity="*" />
+    <End Role="umbracoNode" Type="Self.umbracoNode" Multiplicity="*" />
+  </Association>
+  <Association Name="umbracoUser2UserGroup">
+    <End Role="umbracoUser" Type="Self.umbracoUser" Multiplicity="*" />
+    <End Role="umbracoUserGroup" Type="Self.umbracoUserGroup" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CnxDevSoftDevEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cmsContentNu" EntityType="Self.cmsContentNu" />
+    <EntitySet Name="cmsContentType" EntityType="Self.cmsContentType" />
+    <EntitySet Name="cmsContentTypeAllowedContentType" EntityType="Self.cmsContentTypeAllowedContentType" />
+    <EntitySet Name="cmsDictionary" EntityType="Self.cmsDictionary" />
+    <EntitySet Name="cmsDocumentType" EntityType="Self.cmsDocumentType" />
+    <EntitySet Name="cmsLanguageText" EntityType="Self.cmsLanguageText" />
+    <EntitySet Name="cmsMacro" EntityType="Self.cmsMacro" />
+    <EntitySet Name="cmsMacroProperty" EntityType="Self.cmsMacroProperty" />
+    <EntitySet Name="cmsMember" EntityType="Self.cmsMember" />
+    <EntitySet Name="cmsMemberType" EntityType="Self.cmsMemberType" />
+    <EntitySet Name="cmsPropertyType" EntityType="Self.cmsPropertyType" />
+    <EntitySet Name="cmsPropertyTypeGroup" EntityType="Self.cmsPropertyTypeGroup" />
+    <EntitySet Name="cmsTagRelationship" EntityType="Self.cmsTagRelationship" />
+    <EntitySet Name="cmsTags" EntityType="Self.cmsTags" />
+    <EntitySet Name="cmsTemplate" EntityType="Self.cmsTemplate" />
+    <EntitySet Name="umbracoAccess" EntityType="Self.umbracoAccess" />
+    <EntitySet Name="umbracoAccessRule" EntityType="Self.umbracoAccessRule" />
+    <EntitySet Name="umbracoAudit" EntityType="Self.umbracoAudit" />
+    <EntitySet Name="umbracoCacheInstruction" EntityType="Self.umbracoCacheInstruction" />
+    <EntitySet Name="umbracoConsent" EntityType="Self.umbracoConsent" />
+    <EntitySet Name="umbracoContent" EntityType="Self.umbracoContent" />
+    <EntitySet Name="umbracoContentSchedule" EntityType="Self.umbracoContentSchedule" />
+    <EntitySet Name="umbracoContentVersion" EntityType="Self.umbracoContentVersion" />
+    <EntitySet Name="umbracoContentVersionCultureVariation" EntityType="Self.umbracoContentVersionCultureVariation" />
+    <EntitySet Name="umbracoDataType" EntityType="Self.umbracoDataType" />
+    <EntitySet Name="umbracoDocument" EntityType="Self.umbracoDocument" />
+    <EntitySet Name="umbracoDocumentCultureVariation" EntityType="Self.umbracoDocumentCultureVariation" />
+    <EntitySet Name="umbracoDocumentVersion" EntityType="Self.umbracoDocumentVersion" />
+    <EntitySet Name="umbracoDomain" EntityType="Self.umbracoDomain" />
+    <EntitySet Name="umbracoExternalLogin" EntityType="Self.umbracoExternalLogin" />
+    <EntitySet Name="umbracoKeyValue" EntityType="Self.umbracoKeyValue" />
+    <EntitySet Name="umbracoLanguage" EntityType="Self.umbracoLanguage" />
+    <EntitySet Name="umbracoLock" EntityType="Self.umbracoLock" />
+    <EntitySet Name="umbracoLog" EntityType="Self.umbracoLog" />
+    <EntitySet Name="umbracoMediaVersion" EntityType="Self.umbracoMediaVersion" />
+    <EntitySet Name="umbracoNode" EntityType="Self.umbracoNode" />
+    <EntitySet Name="umbracoPropertyData" EntityType="Self.umbracoPropertyData" />
+    <EntitySet Name="umbracoRedirectUrl" EntityType="Self.umbracoRedirectUrl" />
+    <EntitySet Name="umbracoRelation" EntityType="Self.umbracoRelation" />
+    <EntitySet Name="umbracoRelationType" EntityType="Self.umbracoRelationType" />
+    <EntitySet Name="umbracoServer" EntityType="Self.umbracoServer" />
+    <EntitySet Name="umbracoUser" EntityType="Self.umbracoUser" />
+    <EntitySet Name="umbracoUser2NodeNotify" EntityType="Self.umbracoUser2NodeNotify" />
+    <EntitySet Name="umbracoUserGroup" EntityType="Self.umbracoUserGroup" />
+    <EntitySet Name="umbracoUserGroup2App" EntityType="Self.umbracoUserGroup2App" />
+    <EntitySet Name="umbracoUserGroup2NodePermission" EntityType="Self.umbracoUserGroup2NodePermission" />
+    <EntitySet Name="umbracoUserLogin" EntityType="Self.umbracoUserLogin" />
+    <EntitySet Name="umbracoUserStartNode" EntityType="Self.umbracoUserStartNode" />
+    <AssociationSet Name="FK_cmsContentNu_umbracoContent_nodeId" Association="Self.FK_cmsContentNu_umbracoContent_nodeId">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="cmsContentNu" EntitySet="cmsContentNu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsContentType_umbracoNode_id" Association="Self.FK_cmsContentType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="cmsContentType" EntitySet="cmsContentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsDocumentType_umbracoNode_id" Association="Self.FK_cmsDocumentType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="cmsDocumentType" EntitySet="cmsDocumentType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsLanguageText_umbracoLanguage_id" Association="Self.FK_cmsLanguageText_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="cmsLanguageText" EntitySet="cmsLanguageText" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMacroProperty_cmsMacro_id" Association="Self.FK_cmsMacroProperty_cmsMacro_id">
+      <End Role="cmsMacro" EntitySet="cmsMacro" />
+      <End Role="cmsMacroProperty" EntitySet="cmsMacroProperty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMember_umbracoContent_nodeId" Association="Self.FK_cmsMember_umbracoContent_nodeId">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="cmsMember" EntitySet="cmsMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsMemberType_umbracoNode_id" Association="Self.FK_cmsMemberType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="cmsMemberType" EntitySet="cmsMemberType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsPropertyType_cmsPropertyTypeGroup_id" Association="Self.FK_cmsPropertyType_cmsPropertyTypeGroup_id">
+      <End Role="cmsPropertyTypeGroup" EntitySet="cmsPropertyTypeGroup" />
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsPropertyType_umbracoDataType_nodeId" Association="Self.FK_cmsPropertyType_umbracoDataType_nodeId">
+      <End Role="umbracoDataType" EntitySet="umbracoDataType" />
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTagRelationship_cmsPropertyType" Association="Self.FK_cmsTagRelationship_cmsPropertyType">
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyType" />
+      <End Role="cmsTagRelationship" EntitySet="cmsTagRelationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoPropertyData_cmsPropertyType_id" Association="Self.FK_umbracoPropertyData_cmsPropertyType_id">
+      <End Role="cmsPropertyType" EntitySet="cmsPropertyType" />
+      <End Role="umbracoPropertyData" EntitySet="umbracoPropertyData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTagRelationship_cmsContent" Association="Self.FK_cmsTagRelationship_cmsContent">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="cmsTagRelationship" EntitySet="cmsTagRelationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTagRelationship_cmsTags_id" Association="Self.FK_cmsTagRelationship_cmsTags_id">
+      <End Role="cmsTags" EntitySet="cmsTags" />
+      <End Role="cmsTagRelationship" EntitySet="cmsTagRelationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTags_umbracoLanguage_id" Association="Self.FK_cmsTags_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="cmsTags" EntitySet="cmsTags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cmsTemplate_umbracoNode" Association="Self.FK_cmsTemplate_umbracoNode">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="cmsTemplate" EntitySet="cmsTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id" Association="Self.FK_umbracoAccess_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id1" Association="Self.FK_umbracoAccess_umbracoNode_id1">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccess_umbracoNode_id2" Association="Self.FK_umbracoAccess_umbracoNode_id2">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoAccess" EntitySet="umbracoAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoAccessRule_umbracoAccess_id" Association="Self.FK_umbracoAccessRule_umbracoAccess_id">
+      <End Role="umbracoAccess" EntitySet="umbracoAccess" />
+      <End Role="umbracoAccessRule" EntitySet="umbracoAccessRule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContent_umbracoNode_id" Association="Self.FK_umbracoContent_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentSchedule_umbracoContent_nodeId" Association="Self.FK_umbracoContentSchedule_umbracoContent_nodeId">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="umbracoContentSchedule" EntitySet="umbracoContentSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentVersion_umbracoContent_nodeId" Association="Self.FK_umbracoContentVersion_umbracoContent_nodeId">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDocument_umbracoContent_nodeId" Association="Self.FK_umbracoDocument_umbracoContent_nodeId">
+      <End Role="umbracoContent" EntitySet="umbracoContent" />
+      <End Role="umbracoDocument" EntitySet="umbracoDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentSchedule_umbracoLanguage_id" Association="Self.FK_umbracoContentSchedule_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="umbracoContentSchedule" EntitySet="umbracoContentSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentVersion_umbracoUser_id" Association="Self.FK_umbracoContentVersion_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id" Association="Self.FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id">
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+      <End Role="umbracoContentVersionCultureVariation" EntitySet="umbracoContentVersionCultureVariation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDocumentVersion_umbracoContentVersion_id" Association="Self.FK_umbracoDocumentVersion_umbracoContentVersion_id">
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+      <End Role="umbracoDocumentVersion" EntitySet="umbracoDocumentVersion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoMediaVersion_umbracoContentVersion_id" Association="Self.FK_umbracoMediaVersion_umbracoContentVersion_id">
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+      <End Role="umbracoMediaVersion" EntitySet="umbracoMediaVersion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoPropertyData_umbracoContentVersion_id" Association="Self.FK_umbracoPropertyData_umbracoContentVersion_id">
+      <End Role="umbracoContentVersion" EntitySet="umbracoContentVersion" />
+      <End Role="umbracoPropertyData" EntitySet="umbracoPropertyData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentVersionCultureVariation_umbracoLanguage_id" Association="Self.FK_umbracoContentVersionCultureVariation_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="umbracoContentVersionCultureVariation" EntitySet="umbracoContentVersionCultureVariation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoContentVersionCultureVariation_umbracoUser_id" Association="Self.FK_umbracoContentVersionCultureVariation_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoContentVersionCultureVariation" EntitySet="umbracoContentVersionCultureVariation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDataType_umbracoNode_id" Association="Self.FK_umbracoDataType_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoDataType" EntitySet="umbracoDataType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDocumentCultureVariation_umbracoLanguage_id" Association="Self.FK_umbracoDocumentCultureVariation_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="umbracoDocumentCultureVariation" EntitySet="umbracoDocumentCultureVariation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDocumentCultureVariation_umbracoNode_id" Association="Self.FK_umbracoDocumentCultureVariation_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoDocumentCultureVariation" EntitySet="umbracoDocumentCultureVariation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoDomain_umbracoNode_id" Association="Self.FK_umbracoDomain_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoDomain" EntitySet="umbracoDomain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoLanguage_umbracoLanguage_id" Association="Self.FK_umbracoLanguage_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="umbracoLanguage1" EntitySet="umbracoLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoPropertyData_umbracoLanguage_id" Association="Self.FK_umbracoPropertyData_umbracoLanguage_id">
+      <End Role="umbracoLanguage" EntitySet="umbracoLanguage" />
+      <End Role="umbracoPropertyData" EntitySet="umbracoPropertyData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoLog_umbracoUser_id" Association="Self.FK_umbracoLog_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoLog" EntitySet="umbracoLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_startContentId_umbracoNode_id" Association="Self.FK_startContentId_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_startMediaId_umbracoNode_id" Association="Self.FK_startMediaId_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoNode_umbracoNode_id" Association="Self.FK_umbracoNode_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoNode1" EntitySet="umbracoNode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoNode_umbracoUser_id" Association="Self.FK_umbracoNode_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoNode" Association="Self.FK_umbracoRelation_umbracoNode">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoNode1" Association="Self.FK_umbracoRelation_umbracoNode1">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUser2NodeNotify_umbracoNode_id" Association="Self.FK_umbracoUser2NodeNotify_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoUser2NodeNotify" EntitySet="umbracoUser2NodeNotify" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2NodePermission_umbracoNode_id" Association="Self.FK_umbracoUserGroup2NodePermission_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoUserGroup2NodePermission" EntitySet="umbracoUserGroup2NodePermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserStartNode_umbracoNode_id" Association="Self.FK_umbracoUserStartNode_umbracoNode_id">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoUserStartNode" EntitySet="umbracoUserStartNode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoRelation_umbracoRelationType_id" Association="Self.FK_umbracoRelation_umbracoRelationType_id">
+      <End Role="umbracoRelationType" EntitySet="umbracoRelationType" />
+      <End Role="umbracoRelation" EntitySet="umbracoRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUser2NodeNotify_umbracoUser_id" Association="Self.FK_umbracoUser2NodeNotify_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoUser2NodeNotify" EntitySet="umbracoUser2NodeNotify" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserLogin_umbracoUser_id" Association="Self.FK_umbracoUserLogin_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoUserLogin" EntitySet="umbracoUserLogin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserStartNode_umbracoUser_id" Association="Self.FK_umbracoUserStartNode_umbracoUser_id">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoUserStartNode" EntitySet="umbracoUserStartNode" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2App_umbracoUserGroup_id" Association="Self.FK_umbracoUserGroup2App_umbracoUserGroup_id">
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroup" />
+      <End Role="umbracoUserGroup2App" EntitySet="umbracoUserGroup2App" />
+    </AssociationSet>
+    <AssociationSet Name="FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" Association="Self.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id">
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroup" />
+      <End Role="umbracoUserGroup2NodePermission" EntitySet="umbracoUserGroup2NodePermission" />
+    </AssociationSet>
+    <AssociationSet Name="cmsContentType2ContentType" Association="Self.cmsContentType2ContentType">
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+      <End Role="umbracoNode1" EntitySet="umbracoNode" />
+    </AssociationSet>
+    <AssociationSet Name="cmsMember2MemberGroup" Association="Self.cmsMember2MemberGroup">
+      <End Role="cmsMember" EntitySet="cmsMember" />
+      <End Role="umbracoNode" EntitySet="umbracoNode" />
+    </AssociationSet>
+    <AssociationSet Name="umbracoUser2UserGroup" Association="Self.umbracoUser2UserGroup">
+      <End Role="umbracoUser" EntitySet="umbracoUser" />
+      <End Role="umbracoUserGroup" EntitySet="umbracoUserGroup" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

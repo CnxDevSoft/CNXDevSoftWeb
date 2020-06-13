@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad7295cb5c254aad98a21babfcb90f17" Name="Diagram1">
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsContentNu" Width="1.5" PointX="10.5" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsContentType" Width="1.5" PointX="8.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsContentTypeAllowedContentType" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsDictionary" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsDocumentType" Width="1.5" PointX="8.25" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsLanguageText" Width="1.5" PointX="5.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsMacro" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsMacroProperty" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsMember" Width="1.5" PointX="10.5" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsMemberType" Width="1.5" PointX="8.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsPropertyType" Width="1.5" PointX="13.5" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsPropertyTypeGroup" Width="1.5" PointX="11.25" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsTagRelationship" Width="1.5" PointX="10.5" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsTags" Width="1.5" PointX="8.25" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.cmsTemplate" Width="1.5" PointX="8.25" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoAccess" Width="1.5" PointX="8.25" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoAccessRule" Width="1.5" PointX="10.5" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoAudit" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoCacheInstruction" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoConsent" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoContent" Width="1.5" PointX="8.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoContentSchedule" Width="1.5" PointX="13.5" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoContentVersion" Width="1.5" PointX="3" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoContentVersionCultureVariation" Width="1.5" PointX="5.25" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoDataType" Width="1.5" PointX="8.25" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoDocument" Width="1.5" PointX="10.5" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoDocumentCultureVariation" Width="1.5" PointX="13.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoDocumentVersion" Width="1.5" PointX="5.25" PointY="47.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoDomain" Width="1.5" PointX="8.25" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoExternalLogin" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoKeyValue" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoLanguage" Width="1.5" PointX="3" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoLock" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoLog" Width="1.5" PointX="3" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoMediaVersion" Width="1.5" PointX="5.25" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoNode" Width="1.5" PointX="6" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoPropertyData" Width="1.5" PointX="11.25" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoRedirectUrl" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoRelation" Width="1.5" PointX="14.25" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoRelationType" Width="1.5" PointX="12" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoServer" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUser" Width="1.5" PointX="0.75" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUser2NodeNotify" Width="1.5" PointX="16.25" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUserGroup" Width="1.5" PointX="16.25" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUserGroup2App" Width="1.5" PointX="18.5" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUserGroup2NodePermission" Width="1.5" PointX="18.5" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUserLogin" Width="1.5" PointX="3" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnxDevSoftDevModel.umbracoUserStartNode" Width="1.5" PointX="14.25" PointY="32.5" IsExpanded="true" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsContentNu_umbracoContent_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsContentType_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsDocumentType_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsLanguageText_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsMacroProperty_cmsMacro_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsMember_umbracoContent_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsMemberType_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsPropertyType_cmsPropertyTypeGroup_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsPropertyType_umbracoDataType_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsTagRelationship_cmsPropertyType" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoPropertyData_cmsPropertyType_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsTagRelationship_cmsContent" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsTagRelationship_cmsTags_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsTags_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_cmsTemplate_umbracoNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoAccess_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoAccess_umbracoNode_id1" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoAccess_umbracoNode_id2" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoAccessRule_umbracoAccess_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContent_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentSchedule_umbracoContent_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentVersion_umbracoContent_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDocument_umbracoContent_nodeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentSchedule_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentVersion_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentVersionCultureVariation_umbracoContentVersion_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDocumentVersion_umbracoContentVersion_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoMediaVersion_umbracoContentVersion_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoPropertyData_umbracoContentVersion_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentVersionCultureVariation_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoContentVersionCultureVariation_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDataType_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDocumentCultureVariation_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDocumentCultureVariation_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoDomain_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoLanguage_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoPropertyData_umbracoLanguage_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoLog_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_startContentId_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_startMediaId_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoNode_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoNode_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoRelation_umbracoNode" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoRelation_umbracoNode1" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUser2NodeNotify_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserGroup2NodePermission_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserStartNode_umbracoNode_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoRelation_umbracoRelationType_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUser2NodeNotify_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserLogin_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserStartNode_umbracoUser_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserGroup2App_umbracoUserGroup_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.cmsContentType2ContentType" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.cmsMember2MemberGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="CnxDevSoftDevModel.umbracoUser2UserGroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

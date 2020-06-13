@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CnxDevSoftDevModelStoreContainer" CdmEntityContainer="CnxDevSoftDevEntities">
+    <EntitySetMapping Name="cmsContentNu">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsContentNu">
+        <MappingFragment StoreEntitySet="cmsContentNu">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="published" ColumnName="published" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="rv" ColumnName="rv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsContentType">
+        <MappingFragment StoreEntitySet="cmsContentType">
+          <ScalarProperty Name="pk" ColumnName="pk" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="thumbnail" ColumnName="thumbnail" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isContainer" ColumnName="isContainer" />
+          <ScalarProperty Name="isElement" ColumnName="isElement" />
+          <ScalarProperty Name="allowAtRoot" ColumnName="allowAtRoot" />
+          <ScalarProperty Name="variations" ColumnName="variations" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsContentTypeAllowedContentType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsContentTypeAllowedContentType">
+        <MappingFragment StoreEntitySet="cmsContentTypeAllowedContentType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AllowedId" ColumnName="AllowedId" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDictionary">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsDictionary">
+        <MappingFragment StoreEntitySet="cmsDictionary">
+          <ScalarProperty Name="pk" ColumnName="pk" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="key" ColumnName="key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsDocumentType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsDocumentType">
+        <MappingFragment StoreEntitySet="cmsDocumentType">
+          <ScalarProperty Name="contentTypeNodeId" ColumnName="contentTypeNodeId" />
+          <ScalarProperty Name="templateNodeId" ColumnName="templateNodeId" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsLanguageText">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsLanguageText">
+        <MappingFragment StoreEntitySet="cmsLanguageText">
+          <ScalarProperty Name="pk" ColumnName="pk" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMacro">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsMacro">
+        <MappingFragment StoreEntitySet="cmsMacro">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uniqueId" ColumnName="uniqueId" />
+          <ScalarProperty Name="macroUseInEditor" ColumnName="macroUseInEditor" />
+          <ScalarProperty Name="macroRefreshRate" ColumnName="macroRefreshRate" />
+          <ScalarProperty Name="macroAlias" ColumnName="macroAlias" />
+          <ScalarProperty Name="macroName" ColumnName="macroName" />
+          <ScalarProperty Name="macroCacheByPage" ColumnName="macroCacheByPage" />
+          <ScalarProperty Name="macroCachePersonalized" ColumnName="macroCachePersonalized" />
+          <ScalarProperty Name="macroDontRender" ColumnName="macroDontRender" />
+          <ScalarProperty Name="macroSource" ColumnName="macroSource" />
+          <ScalarProperty Name="macroType" ColumnName="macroType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMacroProperty">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsMacroProperty">
+        <MappingFragment StoreEntitySet="cmsMacroProperty">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uniquePropertyId" ColumnName="uniquePropertyId" />
+          <ScalarProperty Name="editorAlias" ColumnName="editorAlias" />
+          <ScalarProperty Name="macro" ColumnName="macro" />
+          <ScalarProperty Name="macroPropertySortOrder" ColumnName="macroPropertySortOrder" />
+          <ScalarProperty Name="macroPropertyAlias" ColumnName="macroPropertyAlias" />
+          <ScalarProperty Name="macroPropertyName" ColumnName="macroPropertyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMember">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsMember">
+        <MappingFragment StoreEntitySet="cmsMember">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsMemberType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsMemberType">
+        <MappingFragment StoreEntitySet="cmsMemberType">
+          <ScalarProperty Name="pk" ColumnName="pk" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="propertytypeId" ColumnName="propertytypeId" />
+          <ScalarProperty Name="memberCanEdit" ColumnName="memberCanEdit" />
+          <ScalarProperty Name="viewOnProfile" ColumnName="viewOnProfile" />
+          <ScalarProperty Name="isSensitive" ColumnName="isSensitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPropertyType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsPropertyType">
+        <MappingFragment StoreEntitySet="cmsPropertyType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dataTypeId" ColumnName="dataTypeId" />
+          <ScalarProperty Name="contentTypeId" ColumnName="contentTypeId" />
+          <ScalarProperty Name="propertyTypeGroupId" ColumnName="propertyTypeGroupId" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="sortOrder" ColumnName="sortOrder" />
+          <ScalarProperty Name="mandatory" ColumnName="mandatory" />
+          <ScalarProperty Name="mandatoryMessage" ColumnName="mandatoryMessage" />
+          <ScalarProperty Name="validationRegExp" ColumnName="validationRegExp" />
+          <ScalarProperty Name="validationRegExpMessage" ColumnName="validationRegExpMessage" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="variations" ColumnName="variations" />
+          <ScalarProperty Name="UniqueID" ColumnName="UniqueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsPropertyTypeGroup">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsPropertyTypeGroup">
+        <MappingFragment StoreEntitySet="cmsPropertyTypeGroup">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contenttypeNodeId" ColumnName="contenttypeNodeId" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="sortorder" ColumnName="sortorder" />
+          <ScalarProperty Name="uniqueID" ColumnName="uniqueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTagRelationship">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsTagRelationship">
+        <MappingFragment StoreEntitySet="cmsTagRelationship">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="tagId" ColumnName="tagId" />
+          <ScalarProperty Name="propertyTypeId" ColumnName="propertyTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTags">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsTags">
+        <MappingFragment StoreEntitySet="cmsTags">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmsTemplate">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.cmsTemplate">
+        <MappingFragment StoreEntitySet="cmsTemplate">
+          <ScalarProperty Name="pk" ColumnName="pk" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoAccess">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoAccess">
+        <MappingFragment StoreEntitySet="umbracoAccess">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="loginNodeId" ColumnName="loginNodeId" />
+          <ScalarProperty Name="noAccessNodeId" ColumnName="noAccessNodeId" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoAccessRule">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoAccessRule">
+        <MappingFragment StoreEntitySet="umbracoAccessRule">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="accessId" ColumnName="accessId" />
+          <ScalarProperty Name="ruleValue" ColumnName="ruleValue" />
+          <ScalarProperty Name="ruleType" ColumnName="ruleType" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoAudit">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoAudit">
+        <MappingFragment StoreEntitySet="umbracoAudit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="performingUserId" ColumnName="performingUserId" />
+          <ScalarProperty Name="performingDetails" ColumnName="performingDetails" />
+          <ScalarProperty Name="performingIp" ColumnName="performingIp" />
+          <ScalarProperty Name="eventDateUtc" ColumnName="eventDateUtc" />
+          <ScalarProperty Name="affectedUserId" ColumnName="affectedUserId" />
+          <ScalarProperty Name="affectedDetails" ColumnName="affectedDetails" />
+          <ScalarProperty Name="eventType" ColumnName="eventType" />
+          <ScalarProperty Name="eventDetails" ColumnName="eventDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoCacheInstruction">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoCacheInstruction">
+        <MappingFragment StoreEntitySet="umbracoCacheInstruction">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="utcStamp" ColumnName="utcStamp" />
+          <ScalarProperty Name="jsonInstruction" ColumnName="jsonInstruction" />
+          <ScalarProperty Name="originated" ColumnName="originated" />
+          <ScalarProperty Name="instructionCount" ColumnName="instructionCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoConsent">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoConsent">
+        <MappingFragment StoreEntitySet="umbracoConsent">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="current" ColumnName="current" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoContent">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoContent">
+        <MappingFragment StoreEntitySet="umbracoContent">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="contentTypeId" ColumnName="contentTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoContentSchedule">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoContentSchedule">
+        <MappingFragment StoreEntitySet="umbracoContentSchedule">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="action" ColumnName="action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoContentVersion">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoContentVersion">
+        <MappingFragment StoreEntitySet="umbracoContentVersion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="versionDate" ColumnName="versionDate" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="current" ColumnName="current" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoContentVersionCultureVariation">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoContentVersionCultureVariation">
+        <MappingFragment StoreEntitySet="umbracoContentVersionCultureVariation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="versionId" ColumnName="versionId" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="availableUserId" ColumnName="availableUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDataType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoDataType">
+        <MappingFragment StoreEntitySet="umbracoDataType">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="propertyEditorAlias" ColumnName="propertyEditorAlias" />
+          <ScalarProperty Name="dbType" ColumnName="dbType" />
+          <ScalarProperty Name="config" ColumnName="config" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDocument">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoDocument">
+        <MappingFragment StoreEntitySet="umbracoDocument">
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="published" ColumnName="published" />
+          <ScalarProperty Name="edited" ColumnName="edited" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDocumentCultureVariation">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoDocumentCultureVariation">
+        <MappingFragment StoreEntitySet="umbracoDocumentCultureVariation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="edited" ColumnName="edited" />
+          <ScalarProperty Name="available" ColumnName="available" />
+          <ScalarProperty Name="published" ColumnName="published" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDocumentVersion">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoDocumentVersion">
+        <MappingFragment StoreEntitySet="umbracoDocumentVersion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="templateId" ColumnName="templateId" />
+          <ScalarProperty Name="published" ColumnName="published" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoDomain">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoDomain">
+        <MappingFragment StoreEntitySet="umbracoDomain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="domainDefaultLanguage" ColumnName="domainDefaultLanguage" />
+          <ScalarProperty Name="domainRootStructureID" ColumnName="domainRootStructureID" />
+          <ScalarProperty Name="domainName" ColumnName="domainName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoExternalLogin">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoExternalLogin">
+        <MappingFragment StoreEntitySet="umbracoExternalLogin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="loginProvider" ColumnName="loginProvider" />
+          <ScalarProperty Name="providerKey" ColumnName="providerKey" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoKeyValue">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoKeyValue">
+        <MappingFragment StoreEntitySet="umbracoKeyValue">
+          <ScalarProperty Name="key" ColumnName="key" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLanguage">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoLanguage">
+        <MappingFragment StoreEntitySet="umbracoLanguage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="languageISOCode" ColumnName="languageISOCode" />
+          <ScalarProperty Name="languageCultureName" ColumnName="languageCultureName" />
+          <ScalarProperty Name="isDefaultVariantLang" ColumnName="isDefaultVariantLang" />
+          <ScalarProperty Name="mandatory" ColumnName="mandatory" />
+          <ScalarProperty Name="fallbackLanguageId" ColumnName="fallbackLanguageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLock">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoLock">
+        <MappingFragment StoreEntitySet="umbracoLock">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoLog">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoLog">
+        <MappingFragment StoreEntitySet="umbracoLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+          <ScalarProperty Name="entityType" ColumnName="entityType" />
+          <ScalarProperty Name="Datestamp" ColumnName="Datestamp" />
+          <ScalarProperty Name="logHeader" ColumnName="logHeader" />
+          <ScalarProperty Name="logComment" ColumnName="logComment" />
+          <ScalarProperty Name="parameters" ColumnName="parameters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoMediaVersion">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoMediaVersion">
+        <MappingFragment StoreEntitySet="umbracoMediaVersion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="path" ColumnName="path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoNode">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoNode">
+        <MappingFragment StoreEntitySet="umbracoNode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uniqueId" ColumnName="uniqueId" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="sortOrder" ColumnName="sortOrder" />
+          <ScalarProperty Name="trashed" ColumnName="trashed" />
+          <ScalarProperty Name="nodeUser" ColumnName="nodeUser" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="nodeObjectType" ColumnName="nodeObjectType" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoPropertyData">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoPropertyData">
+        <MappingFragment StoreEntitySet="umbracoPropertyData">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="versionId" ColumnName="versionId" />
+          <ScalarProperty Name="propertyTypeId" ColumnName="propertyTypeId" />
+          <ScalarProperty Name="languageId" ColumnName="languageId" />
+          <ScalarProperty Name="segment" ColumnName="segment" />
+          <ScalarProperty Name="intValue" ColumnName="intValue" />
+          <ScalarProperty Name="decimalValue" ColumnName="decimalValue" />
+          <ScalarProperty Name="dateValue" ColumnName="dateValue" />
+          <ScalarProperty Name="varcharValue" ColumnName="varcharValue" />
+          <ScalarProperty Name="textValue" ColumnName="textValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRedirectUrl">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoRedirectUrl">
+        <MappingFragment StoreEntitySet="umbracoRedirectUrl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contentKey" ColumnName="contentKey" />
+          <ScalarProperty Name="createDateUtc" ColumnName="createDateUtc" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="culture" ColumnName="culture" />
+          <ScalarProperty Name="urlHash" ColumnName="urlHash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRelation">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoRelation">
+        <MappingFragment StoreEntitySet="umbracoRelation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+          <ScalarProperty Name="childId" ColumnName="childId" />
+          <ScalarProperty Name="relType" ColumnName="relType" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoRelationType">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoRelationType">
+        <MappingFragment StoreEntitySet="umbracoRelationType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="typeUniqueId" ColumnName="typeUniqueId" />
+          <ScalarProperty Name="dual" ColumnName="dual" />
+          <ScalarProperty Name="parentObjectType" ColumnName="parentObjectType" />
+          <ScalarProperty Name="childObjectType" ColumnName="childObjectType" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoServer">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoServer">
+        <MappingFragment StoreEntitySet="umbracoServer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="computerName" ColumnName="computerName" />
+          <ScalarProperty Name="registeredDate" ColumnName="registeredDate" />
+          <ScalarProperty Name="lastNotifiedDate" ColumnName="lastNotifiedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isMaster" ColumnName="isMaster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUser">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUser">
+        <MappingFragment StoreEntitySet="umbracoUser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userDisabled" ColumnName="userDisabled" />
+          <ScalarProperty Name="userNoConsole" ColumnName="userNoConsole" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userLogin" ColumnName="userLogin" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="passwordConfig" ColumnName="passwordConfig" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userLanguage" ColumnName="userLanguage" />
+          <ScalarProperty Name="securityStampToken" ColumnName="securityStampToken" />
+          <ScalarProperty Name="failedLoginAttempts" ColumnName="failedLoginAttempts" />
+          <ScalarProperty Name="lastLockoutDate" ColumnName="lastLockoutDate" />
+          <ScalarProperty Name="lastPasswordChangeDate" ColumnName="lastPasswordChangeDate" />
+          <ScalarProperty Name="lastLoginDate" ColumnName="lastLoginDate" />
+          <ScalarProperty Name="emailConfirmedDate" ColumnName="emailConfirmedDate" />
+          <ScalarProperty Name="invitedDate" ColumnName="invitedDate" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="tourData" ColumnName="tourData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUser2NodeNotify">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUser2NodeNotify">
+        <MappingFragment StoreEntitySet="umbracoUser2NodeNotify">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="action" ColumnName="action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroup">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUserGroup">
+        <MappingFragment StoreEntitySet="umbracoUserGroup">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userGroupAlias" ColumnName="userGroupAlias" />
+          <ScalarProperty Name="userGroupName" ColumnName="userGroupName" />
+          <ScalarProperty Name="userGroupDefaultPermissions" ColumnName="userGroupDefaultPermissions" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="startContentId" ColumnName="startContentId" />
+          <ScalarProperty Name="startMediaId" ColumnName="startMediaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroup2App">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUserGroup2App">
+        <MappingFragment StoreEntitySet="umbracoUserGroup2App">
+          <ScalarProperty Name="userGroupId" ColumnName="userGroupId" />
+          <ScalarProperty Name="app" ColumnName="app" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserGroup2NodePermission">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUserGroup2NodePermission">
+        <MappingFragment StoreEntitySet="umbracoUserGroup2NodePermission">
+          <ScalarProperty Name="userGroupId" ColumnName="userGroupId" />
+          <ScalarProperty Name="nodeId" ColumnName="nodeId" />
+          <ScalarProperty Name="permission" ColumnName="permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserLogin">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUserLogin">
+        <MappingFragment StoreEntitySet="umbracoUserLogin">
+          <ScalarProperty Name="sessionId" ColumnName="sessionId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="loggedInUtc" ColumnName="loggedInUtc" />
+          <ScalarProperty Name="lastValidatedUtc" ColumnName="lastValidatedUtc" />
+          <ScalarProperty Name="loggedOutUtc" ColumnName="loggedOutUtc" />
+          <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="umbracoUserStartNode">
+      <EntityTypeMapping TypeName="CnxDevSoftDevModel.umbracoUserStartNode">
+        <MappingFragment StoreEntitySet="umbracoUserStartNode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="startNode" ColumnName="startNode" />
+          <ScalarProperty Name="startNodeType" ColumnName="startNodeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="cmsContentType2ContentType" TypeName="CnxDevSoftDevModel.cmsContentType2ContentType" StoreEntitySet="cmsContentType2ContentType">
+      <EndProperty Name="umbracoNode">
+        <ScalarProperty Name="id" ColumnName="childContentTypeId" />
+      </EndProperty>
+      <EndProperty Name="umbracoNode1">
+        <ScalarProperty Name="id" ColumnName="parentContentTypeId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="cmsMember2MemberGroup" TypeName="CnxDevSoftDevModel.cmsMember2MemberGroup" StoreEntitySet="cmsMember2MemberGroup">
+      <EndProperty Name="cmsMember">
+        <ScalarProperty Name="nodeId" ColumnName="Member" />
+      </EndProperty>
+      <EndProperty Name="umbracoNode">
+        <ScalarProperty Name="id" ColumnName="MemberGroup" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="umbracoUser2UserGroup" TypeName="CnxDevSoftDevModel.umbracoUser2UserGroup" StoreEntitySet="umbracoUser2UserGroup">
+      <EndProperty Name="umbracoUser">
+        <ScalarProperty Name="id" ColumnName="userId" />
+      </EndProperty>
+      <EndProperty Name="umbracoUserGroup">
+        <ScalarProperty Name="id" ColumnName="userGroupId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

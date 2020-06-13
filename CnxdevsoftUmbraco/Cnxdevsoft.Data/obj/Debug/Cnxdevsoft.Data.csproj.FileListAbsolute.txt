@@ -1,0 +1,12 @@
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\Cnxdevsoft.Data.dll.config
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\Cnxdevsoft.Data.dll
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\Cnxdevsoft.Data.pdb
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\EntityFramework.dll
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\EntityFramework.xml
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\obj\Debug\Cnxdevsoft.Data.csprojAssemblyReference.cache
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\obj\Debug\Cnxdevsoft.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\obj\Debug\Cnxdevsoft.Data.csproj.CopyComplete
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\obj\Debug\Cnxdevsoft.Data.dll
+C:\Users\Asus ROG\Source\Repos\CNXDevSoftWeb\CnxdevsoftUmbraco\Cnxdevsoft.Data\obj\Debug\Cnxdevsoft.Data.pdb
